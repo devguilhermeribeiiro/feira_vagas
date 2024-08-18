@@ -1,4 +1,9 @@
 <div>
-  <h1 class="font-bold text-4xl">Home#index</h1>
-  <p>Find me in app/views/home/index.html.erb</p>
+  <% @jobs.each do |job| %>
+    <%= link_to home_path(job) do %>
+      <div>
+        <%= render 'job', job: job %>
+      </div>
+    <% end %>
+  <% end %>
 </div>
