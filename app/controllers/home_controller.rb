@@ -4,6 +4,6 @@ class HomeController < ApplicationController
   end
 
   def show
-    @job = Job.find(param[:id])
+    @job = Job.find(params[:id])
   end
 end
