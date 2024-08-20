@@ -1,4 +1,7 @@
 class HomeController < ApplicationController
+
+  def welcome; end
+
   def index
     @jobs = Job.all
   end
