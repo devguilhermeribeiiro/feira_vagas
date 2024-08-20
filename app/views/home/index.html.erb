@@ -1,9 +1,25 @@
-<div>
-  <% @jobs.each do |job| %>
-    <%= link_to home_path(job) do %>
-      <div>
-        <%= render 'job', job: job %>
+<div class=" container flex flex-col items-center justify-center min-h-screen py-8">
+  <nav class="bg-white shadow-lg w-full fixed top-0 left-0 z-70">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <div class="flex-shrink-0 text-2xl font-extrabold text-green-700">
+          Feira Vagas
+        </div>
+        <div class="flex space-x-1">
+          <%= link_to 'Meu Perfil', new_job_path, class: 'text-green-700 hover:bg-green-100 px-4 py-2 rounded-md text-sm font-semibold' %>
+          <%= button_to 'Sair', destroy_employer_session_path, method: :delete, class: 'text-red-700 hover:bg-red-100 px-4 py-2 rounded-md text-sm font-semibold' %>
+        </div>
       </div>
+    </div>
+  </nav>
+  
+  <div>
+    <% @jobs.each do |job| %>
+      <%= link_to home_path(job) do %>
+        <div>
+          <%= render 'job', job: job %>
+        </div>
+      <% end %>
     <% end %>
-  <% end %>
+  </div>
 </div>

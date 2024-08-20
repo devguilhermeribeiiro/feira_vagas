@@ -1,13 +1,13 @@
-<div class="flex flex-col items-center justify-center min-h-screen py-8">
+<div class=" container flex flex-col items-center justify-center min-h-screen py-8">
   <nav class="bg-white shadow-lg w-full fixed top-0 left-0 z-70">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-16">
         <div class="flex-shrink-0 text-2xl font-extrabold text-green-700">
           Feira Vagas
         </div>
-        <div class="flex space-x-6">
-          <%= link_to 'Candidate-se', new_job_seeker_session_path, class: 'text-green-700 hover:bg-green-100 px-4 py-2 rounded-md text-sm font-semibold' %>
-          <%= link_to 'Contrate', new_employer_session_path, class: 'text-red-700 hover:bg-red-100 px-4 py-2 rounded-md text-sm font-semibold' %>
+        <div class="flex space-x-1">
+          <%= link_to 'Trabalhe', start_path, class: 'text-green-700 hover:bg-green-100 px-4 py-2 rounded-md text-sm font-semibold' %>
+          <%= link_to 'Contrate', jobs_path, class: 'text-red-700 hover:bg-red-100 px-4 py-2 rounded-md text-sm font-semibold' %>
         </div>
       </div>
     </div>
@@ -17,7 +17,7 @@
     <h1 class="text-5xl font-extrabold text-green-700 mb-6">Bem-vindo ao Feira Vagas</h1>
     <p class="text-lg text-gray-700 mb-12">Conectando talentos e oportunidades em Feira de Santana.</p>
     <div class="flex space-x-4">
-      <%= link_to 'Candidate-se', new_job_seeker_session_path, class: 'bg-green-700 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-lg transition ease-in-out duration-150' %>
+      <%= link_to 'Candidate-se', start_path, class: 'bg-green-700 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-lg transition ease-in-out duration-150' %>
       <%= link_to 'Contrate', new_employer_session_path, class: 'bg-red-700 hover:bg-red-600 text-white font-bold py-3 px-6 rounded-lg transition ease-in-out duration-150' %>
     </div>
   </main>
