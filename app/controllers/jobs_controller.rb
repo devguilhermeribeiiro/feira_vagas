@@ -3,7 +3,7 @@ class JobsController < ApplicationController
   before_action :authenticate_employer!
 
   def index
-    @jobs = Job.all
+    @jobs = current_employer.jobs
   end
 
   def new
@@ -15,7 +15,7 @@ class JobsController < ApplicationController
   def edit; end
 
   def create
-    @job = Job.new(job_params)
+    @job = current_employer.jobs.new(job_params)
 
     if @job.save
       redirect_to job_url(@job), notice: 'Vaga publicada com sucesso'
@@ -44,6 +44,6 @@ class JobsController < ApplicationController
   end
 
   def job_params
-    params.require(:job).permit(:title, :description, :employer, :location, :mode)
+    params.require(:job).permit(:title, :description, :location, :mode)
   end
 end
