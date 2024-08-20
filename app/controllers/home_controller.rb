@@ -1,4 +1,5 @@
 class HomeController < ApplicationController
+  before_action :authenticate_job_seeker!, except: :welcome
 
   def welcome; end
 
@@ -8,5 +9,9 @@ class HomeController < ApplicationController
 
   def show
     @job = Job.find(params[:id])
+  end
+
+  def profile
+    @user = current_job_seeker
   end
 end
