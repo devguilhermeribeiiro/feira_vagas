@@ -12,6 +12,6 @@ class HomeController < ApplicationController
   end
 
   def profile
-    @user = current_job_seeker
+    @job_seeker = current_job_seeker
   end
 end
