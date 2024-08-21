@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   devise_for :employers
 
   get 'start', to: 'home#index', as: :start
+  get 'profile', to: 'home#profile', as: :job_seeker_profile
   get "up" => "rails/health#show", as: :rails_health_check
 
 end
