@@ -4,7 +4,8 @@ class HomeController < ApplicationController
   def welcome; end
 
   def index
-    @jobs = Job.all
+    jobs = Job.all
+    @jobs = jobs.sort_by(&:created_at).reverse
   end
 
   def show
