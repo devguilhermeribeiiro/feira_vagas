@@ -1,47 +1,9 @@
 <div class="container flex flex-col items-center justify-center mx-auto min-h-screen py-8">
-  <!-- Navbar -->
-  <header class="bg-white shadow-lg w-full fixed top-0 left-0 z-40">
-    <div class="w-11/12 mx-auto px-4 sm:px-6 lg:px-8">
-      <nav class="flex items-center justify-between h-20 sm:h-24 xl:h-24 relative" data-controller="mobile-menu">
-        <!-- Brand Logo -->
-        <div class="flex-shrink-0 text-2xl sm:text-3xl xl:text-4xl font-extrabold text-green-700">
-          <%= link_to 'Feira Vagas', start_path %>
-        </div>
-
-
-        <!-- Navigation Links -->
-        <div class="lg:flex lg:items-center lg:space-x-4 hidden md:block">
-          <%= link_to 'Meu Perfil', job_seeker_profile_path, class: 'text-green-700 hover:bg-green-100 px-4 py-2 rounded-md text-md font-bold' %>
-          <%= link_to 'Sair', destroy_job_seeker_session_path, class: 'text-red-700 hover:bg-red-100 px-4 py-2 rounded-md text-md font-bold' %>
-        </div>
-
-        <!-- Hamburger Icon -->
-        <button data-action="click->mobile-menu#toggle" class="block md:hidden px-2 py-1 text-green-700 hover:bg-green-100 rounded-md">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-          </svg>
-        </button>
-
-        <!-- Mobile Menu -->
-        <div data-mobile-menu-target="menu" class="md:hidden fixed inset-0 bg-white z-50 hidden">
-          <div class="flex flex-col items-end px-4 py-8">
-            <button data-action="click->mobile-menu#toggle" class="self-end px-4 py-2 text-gray-700">
-              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-              </svg>
-            </button>
-
-            <div class="flex flex-col items-end px-4">
-              <%= link_to 'Meu Perfil', job_seeker_profile_path, class: 'text-green-700 hover:bg-green-100 px-2 py-2 rounded-md text-md font-bold' %>
-              <%= link_to 'Sair', destroy_job_seeker_session_path, class: 'text-red-700 hover:bg-red-100 px-2 py-2 rounded-md text-md font-bold' %>
-            </div>
-          </div>
-        </div>
-      </nav>
-    </div>
-  </header>
-
-  <!-- Jobs Grid -->
+  <%= render 'header',
+              first_link: link_to('Meu Perfil', job_seeker_profile_path),
+              second_link: link_to('Sair', destroy_job_seeker_session_path) 
+  %>
+  
   <main class="w-11/12 xl:w-full lg:px-8 mt-24 mx-auto grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
     <% @jobs.each do |job| %>
       <%= link_to home_path(job), class: "md:transform md:hover:scale-105 transition-transform duration-200 ease-in-out" do %>
