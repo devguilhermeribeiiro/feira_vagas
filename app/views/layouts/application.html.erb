@@ -14,6 +14,12 @@
   <body>
     <main class="bg-zinc-100">
       <%= yield %>
+      
+      <footer class="w-full mt-6">
+        <div class="text-center text-gray-500 text-sm py-4">
+          © <%= Date.current.year %> Feira Vagas. Todos os direitos reservados.
+        </div>
+      </footer>
     </main>
   </body>
 </html>
