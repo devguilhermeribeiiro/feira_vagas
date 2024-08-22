@@ -1,0 +1,21 @@
+<section>
+  <div class="pb-4" >
+    <h3 class="text-xl font-semibold text-gray-700">Descrição da Vaga</h3>
+    <p class="whitespace-pre-wrap text-gray-700"><%= @job.description %></p>
+  </div>
+  
+  <div class="pb-4">
+    <h3 class="text-xl font-semibold text-gray-700">Requisitos</h3>
+    <p class="whitespace-pre-wrap text-gray-700"><%=@job.requirements %></p>
+  </div>
+
+  <div class="pb-4">
+    <h3 class="text-xl font-semibold text-gray-700">Qualificações</h3>
+    <p class="whitespace-pre-wrap text-gray-700"><%= @job.skills %></p>
+  </div>
+
+  <div class="pb-4">
+    <h3 class="text-xl font-semibold text-gray-700">Benefícios</h3>
+    <p class="whitespace-pre-wrap text-gray-700"><%= @job.benefits %></p>
+  </div>
+</section>

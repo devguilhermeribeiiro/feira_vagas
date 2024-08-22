@@ -1,0 +1,33 @@
+    <!-- Job Title and Company -->
+    <section class="mb-6">
+      <h1 class="text-3xl font-bold text-gray-800">
+        <%= @job.title %>
+      </h1>
+      <h2 class="text-xl text-gray-600 mt-2">
+        <%= @job.employer.company_name %>
+      </h2>
+    </section>
+
+  
+    <section class="mb-8 grid grid-cols-1 lg:grid-cols-2 gap-6">
+      <div class="space-y-4">
+        <div>
+          <h3 class="text-xl font-semibold text-gray-700">Localização:</h3>
+          <p class="text-gray-600"><%= @job.location %></p>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold text-gray-700">Salário:</h3>
+          <p class="text-gray-600"><%= @job.salary %></p>
+        </div>
+      </div>
+      <div class="space-y-4">
+        <div>
+          <h3 class="text-xl font-semibold text-gray-700">Tipo de Contrato:</h3>
+          <p class="text-gray-600"><%= @job.mode %></p>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold text-gray-700">Data de Publicação:</h3>
+          <p class="text-gray-600"><%= @job.created_at.strftime('%d/%m') %></p>
+        </div>
+      </div>
+    </section>
