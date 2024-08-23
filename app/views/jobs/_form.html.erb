@@ -1,9 +1,8 @@
-<%= form_with(model: @job, local: true) do |form| %>
+<%= form_with(model: @job, local: true, class: "space-y-6") do |form| %>
   <% if job.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(job.errors.count, 'error') %></h2>
-
-      <ul>
+    <div id="error_explanation" class="bg-red-100 text-red-700 p-4 rounded-md">
+      <h2 class="font-bold text-lg"><%= pluralize(job.errors.count, 'error') %> proibiram esta vaga de ser salva:</h2>
+      <ul class="list-disc pl-6">
         <% job.errors.full_messages.each do |message| %>
           <li><%= message %></li>
         <% end %>
@@ -12,26 +11,46 @@
   <% end %>
 
   <div>
-    <%= form.label :title %>
-    <%= form.text_field :title %>
+    <%= form.label :titulo, class: "block text-sm font-medium text-gray-700" %>
+    <%= form.text_field :title, class: "mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-green-500 focus:border-green-500 sm:text-sm" %>
   </div>
 
   <div>
-    <%= form.label :location %>
-    <%= form.text_field :location %>
+    <%= form.label :localização, class: "block text-sm font-medium text-gray-700" %>
+    <%= form.text_field :location, class: "mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-green-500 focus:border-green-500 sm:text-sm" %>
   </div>
 
   <div>
-    <%= form.label :mode %>
-    <%= form.text_field :mode %>
+    <%= form.label :tipo_de_contrato, class: "block text-sm font-medium text-gray-700" %>
+    <%= form.text_field :mode, placeholder: 'Ex: CLT - Presencial.', class: "mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-green-500 focus:border-green-500 sm:text-sm" %>
   </div>
 
   <div>
-    <%= form.label :description %>
-    <%= form.text_area :description %>
+    <%= form.label :salário, class: "block text-sm font-medium text-gray-700" %>
+    <%= form.text_field :salary, class: "mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-green-500 focus:border-green-500 sm:text-sm" %>
   </div>
 
   <div>
-    <%= form.submit 'Publish' %>
+    <%= form.label :descrição_da_vaga, class: "block text-sm font-medium text-gray-700" %>
+    <%= form.text_area :description, rows: 5, class: "mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-green-500 focus:border-green-500 sm:text-sm" %>
+  </div>
+
+  <div>
+    <%= form.label :requisitos, class: "block text-sm font-medium text-gray-700" %>
+    <%= form.text_area :requirements, rows: 5, placeholder: 'Ex: Experiência, habilidades, idade, etc...', class: "mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-green-500 focus:border-green-500 sm:text-sm" %>
+  </div>
+
+  <div>
+    <%= form.label :qualificações,class: "block text-sm font-medium text-gray-700" %>
+    <%= form.text_area :skills, rows: 5, placeholder: 'Ex: Formação, graduação, etc...', class: "mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-green-500 focus:border-green-500 sm:text-sm" %>
+  </div>
+
+  <div>
+    <%= form.label :benefícios, class: "block text-sm font-medium text-gray-700" %>
+    <%= form.text_area :benefits, rows: 5, class: "mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-green-500 focus:border-green-500 sm:text-sm" %>
+  </div>
+
+  <div>
+    <%= form.submit 'Publicar', class: "bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500" %>
   </div>
 <% end %>

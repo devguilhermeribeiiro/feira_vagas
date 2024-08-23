@@ -1,15 +1,19 @@
-<div id="<%= dom_id job %>">
-  <div>
-    <p><%= job.employer.company_name %></p>
-    <p><%= job.created_at.strftime('%B %d, %Y') %></p>
+<div id="<%= dom_id(job) %>" class="transition-transform transform hover:scale-105">
+  <!-- Job Header -->
+  <div class="flex flex-row justify-between items-center mb-4">
+    <p class="text-lg font-semibold text-green-700"><%= job.employer.company_name %></p>
+    <p class="text-sm text-gray-500"><%= job.created_at.strftime('%d/%m') %></p>
   </div>
   
-  <div>
-    <h2><%= job.title %></h2>
+  <!-- Job Title -->
+  <div class="mb-4">
+    <h2 class="text-xl font-bold text-gray-800"><%= job.title %></h2>
   </div>
 
-  <div>
-    <p><%= job.location %></p>
-    <p><%= job.mode %></p>
+  <!-- Job Details -->
+  <div class="flex flex-col text-gray-600">
+    <p class="mb-1"><strong>Localização:</strong> <%= job.location %></p>
+    <p class="mb-1"><strong>Modalidade:</strong> <%= job.mode %></p>
+    <p><strong>Candidaturas:</strong> <%# job.applications %></p>
   </div>
 </div>
