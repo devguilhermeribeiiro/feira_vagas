@@ -3,7 +3,8 @@ class JobsController < ApplicationController
   before_action :authenticate_employer!
 
   def index
-    @jobs = current_employer.jobs
+    jobs = current_employer.jobs
+    @jobs = jobs.sort_by(&:created_at).reverse
   end
 
   def new
