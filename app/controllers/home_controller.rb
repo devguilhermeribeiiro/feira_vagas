@@ -12,7 +12,4 @@ class HomeController < ApplicationController
     @job = Job.find(params[:id])
   end
 
-  def profile
-    @job_seeker = current_job_seeker
-  end
 end
