@@ -1,0 +1,13 @@
+<div class="container flex flex-col mx-auto items-center justify-center min-h-screen py-8">
+  <%= render 'header',
+              first_link: link_to('Meu Perfil', job_seeker_path, class: "text-green-600 hover:bg-green-200 px-4 py-2 rounded-md text-md font-bold"),
+              second_link: button_to('Sair', destroy_job_seeker_session_path, method: :delete, class: "text-red-600 hover:bg-red-200 px-4 py-2 rounded-md text-md font-bold") %>
+
+  <div class="w-11/12 xl:w-3/4 bg-white shadow-lg rounded-lg p-8 mt-24">
+    <%= render 'job_seeker_data' %>
+
+    <div class="mt-6 text-center">
+      <%= link_to 'Editar Perfil', edit_job_seeker_path, class: "text-white bg-green-600 hover:bg-green-700 px-6 py-2 rounded-md font-bold" %>
+    </div>
+  </div>
+</div>

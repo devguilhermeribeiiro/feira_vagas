@@ -1,0 +1,25 @@
+<div class="flex flex-col items-center space-y-6">
+  <div class="w-24 h-24 rounded-full bg-gray-200 flex items-center justify-center">
+    <%# Adicione aqui a imagem de perfil quando estiver disponível %>
+    <span class="text-gray-500">Imagem</span>
+  </div>
+
+  <div class="text-center">
+    <h2 class="text-2xl font-bold text-gray-800"><%= @job_seeker.full_name %></h2>
+    <p class="text-gray-500"><%= @job_seeker.email %></p>
+    <p class="text-gray-500"><%= @job_seeker.phone %></p>
+  </div>
+
+  <div class="w-full text-left mt-8 space-y-4">
+    <div>
+      <h3 class="text-lg font-bold text-gray-700">Formação Acadêmica</h3>
+      <p class="text-gray-600"><%= @job_seeker.degree %></p>
+      <p class="text-gray-600"><%= @job_seeker.courses %></p>
+    </div>
+
+    <div>
+      <h3 class="text-lg font-bold text-gray-700">Experiências</h3>
+      <p class="text-gray-600"><%= @job_seeker.experiences %></p>
+    </div>
+  </div>
+</div>
