@@ -1,7 +1,10 @@
 <div class="flex flex-col items-center space-y-6">
   <div class="w-24 h-24 rounded-full bg-gray-200 flex items-center justify-center">
-    <%# Adicione aqui a imagem de perfil quando estiver disponível %>
-    <span class="text-gray-500">Imagem</span>
+    <% if @job_seeker.profile_img.attached? %>
+      <%= image_tag @job_seeker.profile_img, alt: "Foto de Perfil", class: "rounded-full w-24 h-24" %>
+    <% else %>
+      <p>No image</p>
+    <% end %>
   </div>
 
   <div class="text-center">

@@ -25,6 +25,6 @@ class JobSeekersController < ApplicationController
   end
 
   def job_seeker_params
-    params.require(:job_seeker).permit(%i[ full_name phone email degree courses experiences])
+    params.require(:job_seeker).permit(%i[ full_name phone email degree courses experiences profile_img ])
   end
 end
