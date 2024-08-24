@@ -1,6 +1,6 @@
 <div class="container mx-auto min-h-screen flex flex-col items-center">
   <%= render 'header',
-              first_link: link_to('Meu Perfil', job_seekers_profile_path),
+              first_link: link_to('Meu Perfil', job_seeker_path(current_job_seeker)),
               second_link: link_to('Sair', destroy_job_seeker_session_path) %>
 
   <main class="w-full xl:w-3/4 bg-white shadow-lg rounded-lg p-8 mt-32">
