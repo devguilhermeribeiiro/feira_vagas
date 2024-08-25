@@ -1,0 +1,467 @@
+=> 
+[32m#<ActiveRecord::ConnectionAdapters::PostgreSQLAdapter:0x00007f1ac218ba58[0m
+ @advisory_locks_enabled[32m=[0m[36m[1mtrue[0m,
+ @config[32m=[0m
+  {[33m:[0m[33madapter[0m=>[31m[1m"[0m[31mpostgresql[0m[31m[1m"[0m,
+   [33m:[0m[33mencoding[0m=>[31m[1m"[0m[31municode[0m[31m[1m"[0m,
+   [33m:[0m[33mpool[0m=>[34m[1m5[0m,
+   [33m:[0m[33musername[0m=>[31m[1m"[0m[31mskykru[0m[31m[1m"[0m,
+   [33m:[0m[33mpassword[0m=>[31m[1m"[0m[31mskykru[0m[31m[1m"[0m,
+   [33m:[0m[33mdatabase[0m=>[31m[1m"[0m[31mfeira_vagas_development[0m[31m[1m"[0m},
+ @connection_parameters[32m=[0m
+  {[33m:[0m[33muser[0m=>[31m[1m"[0m[31mskykru[0m[31m[1m"[0m, [33m:[0m[33mpassword[0m=>[31m[1m"[0m[31mskykru[0m[31m[1m"[0m, [33m:[0m[33mdbname[0m=>[31m[1m"[0m[31mfeira_vagas_development[0m[31m[1m"[0m},
+ @default_timezone[32m=[0m[36m[1mnil[0m,
+ @idle_since[32m=[0m[35m[1m9180.72917205[0m,
+ @instrumenter[32m=[0m
+  [32m#<ActiveSupport::Notifications::Instrumenter:0x00007f1ac2321110[0m
+   @id[32m=[0m[31m[1m"[0m[31m67edf4eb0cc0a2fd9394[0m[31m[1m"[0m,
+   @notifier[32m=[0m[32m#<ActiveSupport::Notifications::Fanout (19 patterns)>[0m[32m>[0m,
+ @lock[32m=[0m[34m[1m[4mActiveSupport[0m::[34m[1m[4mConcurrency[0m::[34m[1m[4mNullLock[0m,
+ @logger[32m=[0m
+  [32m#<ActiveSupport::BroadcastLogger:0x00007f1ac26a0778[0m
+   @broadcasts[32m=[0m
+    [[32m#<ActiveSupport::Logger:0x00007f1ac285b770[0m
+      @default_formatter[32m=[0m[32m#<Logger::Formatter:0x00007f1ac26a4008[0m @datetime_format[32m=[0m[36m[1mnil[0m[32m>[0m,
+      @formatter[32m=[0m
+       [32m#<ActiveSupport::Logger::SimpleFormatter:0x00007f1ac26a0c78[0m @datetime_format[32m=[0m[36m[1mnil[0m[32m>[0m,
+      @level[32m=[0m[34m[1m0[0m,
+      @level_override[32m=[0m{},
+      @local_level_key[32m=[0m[33m:[0m[33mlogger_thread_safe_level_16240[0m,
+      @logdev[32m=[0m
+       [32m#<Logger::LogDevice:0x00007f1ac2830e80[0m
+        @binmode[32m=[0m[36m[1mfalse[0m,
+        @dev[32m=[0m[32m#<File:/home/guilherme/rails-apps/feira-vagas/log/development.log>[0m,
+        @filename[32m=[0m[31m[1m"[0m[31m/home/guilherme/rails-apps/feira-vagas/log/development.log[0m[31m[1m"[0m,
+        @mon_data[32m=[0m[32m#<Monitor:0x00007f1ac26a3f18[0m[32m>[0m,
+        @mon_data_owner_object_id[32m=[0m[34m[1m4500[0m,
+        @shift_age[32m=[0m[34m[1m1[0m,
+        @shift_period_suffix[32m=[0m[31m[1m"[0m[31m%Y%m%d[0m[31m[1m"[0m,
+        @shift_size[32m=[0m[34m[1m104857600[0m[32m>[0m,
+      @progname[32m=[0m[36m[1mnil[0m[32m>[0m,
+     [32m#<ActiveSupport::Logger:0x00007f1ac2458ee8[0m
+      @default_formatter[32m=[0m[32m#<Logger::Formatter:0x00007f1ac23cd3c0[0m @datetime_format[32m=[0m[36m[1mnil[0m[32m>[0m,
+      @formatter[32m=[0m
+       [32m#<ActiveSupport::Logger::SimpleFormatter:0x00007f1ac23cd140[0m @datetime_format[32m=[0m[36m[1mnil[0m[32m>[0m,
+      @level[32m=[0m[34m[1m0[0m,
+      @level_override[32m=[0m{},
+      @logdev[32m=[0m
+       [32m#<Logger::LogDevice:0x00007f1ac2458e98[0m
+        @binmode[32m=[0m[36m[1mfalse[0m,
+        @dev[32m=[0m[32m#<IO:<STDERR>>[0m,
+        @filename[32m=[0m[36m[1mnil[0m,
+        @mon_data[32m=[0m[32m#<Monitor:0x00007f1ac23cd320[0m[32m>[0m,
+        @mon_data_owner_object_id[32m=[0m[34m[1m16220[0m,
+        @shift_age[32m=[0m[36m[1mnil[0m,
+        @shift_period_suffix[32m=[0m[36m[1mnil[0m,
+        @shift_size[32m=[0m[36m[1mnil[0m[32m>[0m,
+      @progname[32m=[0m[36m[1mnil[0m[32m>[0m],
+   @formatter[32m=[0m
+    [32m#<ActiveSupport::Logger::SimpleFormatter:0x00007f1ac26a0c78[0m @datetime_format[32m=[0m[36m[1mnil[0m[32m>[0m,
+   @progname[32m=[0m[31m[1m"[0m[31mBroadcast[0m[31m[1m"[0m[32m>[0m,
+ @mapped_default_timezone[32m=[0m[33m:[0m[33mutc[0m,
+ @max_identifier_length[32m=[0m[36m[1mnil[0m,
+ @notice_receiver_sql_warnings[32m=[0m[],
+ @owner[32m=[0m[32m#<Thread:0x00007f1adef8a9d0 run>[0m,
+ @pool[32m=[0m
+  [32m#<ActiveRecord::ConnectionAdapters::ConnectionPool:0x00007f1ac25f9888[0m
+   @async_executor[32m=[0m[36m[1mnil[0m,
+   @automatic_reconnect[32m=[0m[36m[1mtrue[0m,
+   @available[32m=[0m
+    [32m#<ActiveRecord::ConnectionAdapters::ConnectionPool::ConnectionLeasingQueue:0x00007f1ac2523300[0m
+     @cond[32m=[0m
+      [32m#<MonitorMixin::ConditionVariable:0x00007f1ac23b0860[0m
+       @cond[32m=[0m[32m#<Thread::ConditionVariable:0x00007f1ac23b07e8[0m[32m>[0m,
+       @monitor[32m=[0m[32m#<Monitor:0x00007f1ac23b0e00[0m[32m>[0m[32m>[0m,
+     @lock[32m=[0m[32m#<ActiveRecord::ConnectionAdapters::ConnectionPool:0x00007f1ac25f9888[0m ...[32m>[0m,
+     @num_waiting[32m=[0m[34m[1m0[0m,
+     @queue[32m=[0m[][32m>[0m,
+   @checkout_timeout[32m=[0m[35m[1m5.0[0m,
+   @connections[32m=[0m
+    [[32m#<ActiveRecord::ConnectionAdapters::PostgreSQLAdapter:0x00007f1ac218ba58[0m ...[32m>[0m],
+   @db_config[32m=[0m
+    [32m#<ActiveRecord::DatabaseConfigurations::HashConfig:0x00007f1ac2406b70[0m
+     @configuration_hash[32m=[0m
+      {[33m:[0m[33madapter[0m=>[31m[1m"[0m[31mpostgresql[0m[31m[1m"[0m,
+       [33m:[0m[33mencoding[0m=>[31m[1m"[0m[31municode[0m[31m[1m"[0m,
+       [33m:[0m[33mpool[0m=>[34m[1m5[0m,
+       [33m:[0m[33musername[0m=>[31m[1m"[0m[31mskykru[0m[31m[1m"[0m,
+       [33m:[0m[33mpassword[0m=>[31m[1m"[0m[31mskykru[0m[31m[1m"[0m,
+       [33m:[0m[33mdatabase[0m=>[31m[1m"[0m[31mfeira_vagas_development[0m[31m[1m"[0m},
+     @env_name[32m=[0m[31m[1m"[0m[31mdevelopment[0m[31m[1m"[0m,
+     @name[32m=[0m[31m[1m"[0m[31mprimary[0m[31m[1m"[0m[32m>[0m,
+   @idle_timeout[32m=[0m[35m[1m300.0[0m,
+   @lock_thread[32m=[0m[36m[1mfalse[0m,
+   @mon_data[32m=[0m[32m#<Monitor:0x00007f1ac23b0e00[0m[32m>[0m,
+   @mon_data_owner_object_id[32m=[0m[34m[1m16020[0m,
+   @now_connecting[32m=[0m[34m[1m0[0m,
+   @pool_config[32m=[0m
+    [32m#<ActiveRecord::ConnectionAdapters::PoolConfig:0x00007f1ac25274a0[0m
+     @_mutex[32m=[0m[32m#<Thread::Mutex:0x00007f1ac23227b8[0m[32m>[0m,
+     @connection_class[32m=[0m[34m[1m[4mActiveRecord[0m::[34m[1m[4mBase[0m,
+     @db_config[32m=[0m
+      [32m#<ActiveRecord::DatabaseConfigurations::HashConfig:0x00007f1ac2406b70[0m
+       @configuration_hash[32m=[0m
+        {[33m:[0m[33madapter[0m=>[31m[1m"[0m[31mpostgresql[0m[31m[1m"[0m,
+         [33m:[0m[33mencoding[0m=>[31m[1m"[0m[31municode[0m[31m[1m"[0m,
+         [33m:[0m[33mpool[0m=>[34m[1m5[0m,
+         [33m:[0m[33musername[0m=>[31m[1m"[0m[31mskykru[0m[31m[1m"[0m,
+         [33m:[0m[33mpassword[0m=>[31m[1m"[0m[31mskykru[0m[31m[1m"[0m,
+         [33m:[0m[33mdatabase[0m=>[31m[1m"[0m[31mfeira_vagas_development[0m[31m[1m"[0m},
+       @env_name[32m=[0m[31m[1m"[0m[31mdevelopment[0m[31m[1m"[0m,
+       @name[32m=[0m[31m[1m"[0m[31mprimary[0m[31m[1m"[0m[32m>[0m,
+     @pool[32m=[0m[32m#<ActiveRecord::ConnectionAdapters::ConnectionPool:0x00007f1ac25f9888[0m ...[32m>[0m,
+     @role[32m=[0m[33m:[0m[33mwriting[0m,
+     @schema_reflection[32m=[0m
+      [32m#<ActiveRecord::ConnectionAdapters::SchemaReflection:0x00007f1ac1b6da18[0m
+       @cache[32m=[0m
+        [32m#<ActiveRecord::ConnectionAdapters::SchemaCache:0x00007f1ac1b1cc30[0m
+         @columns[32m=[0m{},
+         @columns_hash[32m=[0m{},
+         @data_sources[32m=[0m{},
+         @database_version[32m=[0m[34m[1m160003[0m,
+         @indexes[32m=[0m{},
+         @primary_keys[32m=[0m{},
+         @version[32m=[0m[36m[1mnil[0m[32m>[0m,
+       @cache_path[32m=[0m[31m[1m"[0m[31mdb/schema_cache.yml[0m[31m[1m"[0m[32m>[0m,
+     @shard[32m=[0m[33m:[0m[33mdefault[0m[32m>[0m,
+   @query_cache_enabled[32m=[0m
+    [32m#<Concurrent::Map:0x00007f1ac23b0c70 entries=0 default_proc=#<Proc:0x00007f1ac23b0c20 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/connection_adapters/abstract/query_cache.rb:35>>[0m,
+   @reaper[32m=[0m
+    [32m#<ActiveRecord::ConnectionAdapters::ConnectionPool::Reaper:0x00007f1ac23b06a8[0m
+     @frequency[32m=[0m[35m[1m60.0[0m,
+     @pool[32m=[0m[32m#<ActiveRecord::ConnectionAdapters::ConnectionPool:0x00007f1ac25f9888[0m ...[32m>[0m[32m>[0m,
+   @role[32m=[0m[33m:[0m[33mwriting[0m,
+   @shard[32m=[0m[33m:[0m[33mdefault[0m,
+   @size[32m=[0m[34m[1m5[0m,
+   @thread_cached_conns[32m=[0m[32m#<Concurrent::Map:0x00007f1ac23b09f0 entries=1 default_proc=nil>[0m,
+   @threads_blocking_new_connections[32m=[0m[34m[1m0[0m[32m>[0m,
+ @prepared_statements[32m=[0m[36m[1mtrue[0m,
+ @query_cache[32m=[0m{},
+ @query_cache_enabled[32m=[0m[36m[1mfalse[0m,
+ @query_cache_max_size[32m=[0m[34m[1m100[0m,
+ @raw_connection[32m=[0m
+  [32m#<PG::Connection:0x00007f1ac1b6a1b0 host=/var/run/postgresql port=5432 user=skykru type_map_for_results=#<PG::TypeMapByOid:0x00007f1ac1b62a28> type_map_for_queries=#<PG::TypeMapByClass:0x00007f1ac1b658b8>>[0m,
+ @raw_connection_dirty[32m=[0m[36m[1mfalse[0m,
+ @schema_cache[32m=[0m
+  [32m#<ActiveRecord::ConnectionAdapters::BoundSchemaReflection:0x00007f1ac1b6d9a0[0m
+   @connection[32m=[0m
+    [32m#<ActiveRecord::ConnectionAdapters::PostgreSQLAdapter:0x00007f1ac218ba58[0m ...[32m>[0m,
+   @schema_reflection[32m=[0m
+    [32m#<ActiveRecord::ConnectionAdapters::SchemaReflection:0x00007f1ac1b6da18[0m
+     @cache[32m=[0m
+      [32m#<ActiveRecord::ConnectionAdapters::SchemaCache:0x00007f1ac1b1cc30[0m
+       @columns[32m=[0m{},
+       @columns_hash[32m=[0m{},
+       @data_sources[32m=[0m{},
+       @database_version[32m=[0m[34m[1m160003[0m,
+       @indexes[32m=[0m{},
+       @primary_keys[32m=[0m{},
+       @version[32m=[0m[36m[1mnil[0m[32m>[0m,
+     @cache_path[32m=[0m[31m[1m"[0m[31mdb/schema_cache.yml[0m[31m[1m"[0m[32m>[0m[32m>[0m,
+ @statements[32m=[0m
+  [32m#<ActiveRecord::ConnectionAdapters::PostgreSQLAdapter::StatementPool:0x00007f1ac1b1db30[0m
+   @cache[32m=[0m{[34m[1m291664[0m=>{}},
+   @connection[32m=[0m
+    [32m#<ActiveRecord::ConnectionAdapters::PostgreSQLAdapter:0x00007f1ac218ba58[0m ...[32m>[0m,
+   @counter[32m=[0m[34m[1m0[0m,
+   @statement_limit[32m=[0m[34m[1m1000[0m[32m>[0m,
+ @timestamp_decoder[32m=[0m
+  [32m#<PG::TextDecoder::TimestampUtc:0x00007f1ac1b62488 "timestamp"  oid=1114>[0m,
+ @transaction_manager[32m=[0m
+  [32m#<ActiveRecord::ConnectionAdapters::TransactionManager:0x00007f1ac1b1db80[0m
+   @connection[32m=[0m
+    [32m#<ActiveRecord::ConnectionAdapters::PostgreSQLAdapter:0x00007f1ac218ba58[0m ...[32m>[0m,
+   @has_unmaterialized_transactions[32m=[0m[36m[1mfalse[0m,
+   @lazy_transactions_enabled[32m=[0m[36m[1mtrue[0m,
+   @materializing_transactions[32m=[0m[36m[1mfalse[0m,
+   @stack[32m=[0m[][32m>[0m,
+ @type_map[32m=[0m
+  [32m#<ActiveRecord::Type::HashLookupTypeMap:0x00007f1ac1b620a0[0m
+   @cache[32m=[0m
+    [32m#<Concurrent::Map:0x00007f1ac1b62028 entries=0 default_proc=#<Proc:0x00007f1ac1b61fd8 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/type/hash_lookup_type_map.rb:8>>[0m,
+   @mapping[32m=[0m
+    {[31m[1m"[0m[31mint2[0m[31m[1m"[0m=>
+      [32m#<Proc:0x00007f1ac1b61bc8 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/type/hash_lookup_type_map.rb:29>[0m,
+     [31m[1m"[0m[31mint4[0m[31m[1m"[0m=>
+      [32m#<Proc:0x00007f1ac1b61b00 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/type/hash_lookup_type_map.rb:29>[0m,
+     [31m[1m"[0m[31mint8[0m[31m[1m"[0m=>
+      [32m#<Proc:0x00007f1ac1b61970 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/type/hash_lookup_type_map.rb:29>[0m,
+     [31m[1m"[0m[31moid[0m[31m[1m"[0m=>
+      [32m#<Proc:0x00007f1ac1b61628 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/type/hash_lookup_type_map.rb:29>[0m,
+     [31m[1m"[0m[31mfloat4[0m[31m[1m"[0m=>
+      [32m#<Proc:0x00007f1ac1b613f8 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/type/hash_lookup_type_map.rb:29>[0m,
+     [31m[1m"[0m[31mfloat8[0m[31m[1m"[0m=>
+      [32m#<Proc:0x00007f1ac1b61358 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/type/hash_lookup_type_map.rb:40>[0m,
+     [31m[1m"[0m[31mtext[0m[31m[1m"[0m=>
+      [32m#<Proc:0x00007f1ac1b61100 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/type/hash_lookup_type_map.rb:29>[0m,
+     [31m[1m"[0m[31mvarchar[0m[31m[1m"[0m=>
+      [32m#<Proc:0x00007f1ac1b61038 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/connection_adapters/abstract_adapter.rb:936>[0m,
+     [31m[1m"[0m[31mchar[0m[31m[1m"[0m=>
+      [32m#<Proc:0x00007f1ac1b60fe8 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/type/hash_lookup_type_map.rb:40>[0m,
+     [31m[1m"[0m[31mname[0m[31m[1m"[0m=>
+      [32m#<Proc:0x00007f1ac1b60f98 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/type/hash_lookup_type_map.rb:40>[0m,
+     [31m[1m"[0m[31mbpchar[0m[31m[1m"[0m=>
+      [32m#<Proc:0x00007f1ac1b60f48 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/type/hash_lookup_type_map.rb:40>[0m,
+     [31m[1m"[0m[31mbool[0m[31m[1m"[0m=>
+      [32m#<Proc:0x00007f1ac1b60d40 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/type/hash_lookup_type_map.rb:29>[0m,
+     [31m[1m"[0m[31mbit[0m[31m[1m"[0m=>
+      [32m#<Proc:0x00007f1ac1b60cc8 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/connection_adapters/abstract_adapter.rb:936>[0m,
+     [31m[1m"[0m[31mvarbit[0m[31m[1m"[0m=>
+      [32m#<Proc:0x00007f1ac1b60c50 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/connection_adapters/abstract_adapter.rb:936>[0m,
+     [31m[1m"[0m[31mdate[0m[31m[1m"[0m=>
+      [32m#<Proc:0x00007f1ac1b60958 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/type/hash_lookup_type_map.rb:29>[0m,
+     [31m[1m"[0m[31mmoney[0m[31m[1m"[0m=>
+      [32m#<Proc:0x00007f1ac1b60890 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/type/hash_lookup_type_map.rb:29>[0m,
+     [31m[1m"[0m[31mbytea[0m[31m[1m"[0m=>
+      [32m#<Proc:0x00007f1ac1b60638 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/type/hash_lookup_type_map.rb:29>[0m,
+     [31m[1m"[0m[31mpoint[0m[31m[1m"[0m=>
+      [32m#<Proc:0x00007f1ac1b60408 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/type/hash_lookup_type_map.rb:29>[0m,
+     [31m[1m"[0m[31mhstore[0m[31m[1m"[0m=>
+      [32m#<Proc:0x00007f1ac1b601d8 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/type/hash_lookup_type_map.rb:29>[0m,
+     [31m[1m"[0m[31mjson[0m[31m[1m"[0m=>
+      [32m#<Proc:0x00007f1ac1b600e8 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/type/hash_lookup_type_map.rb:29>[0m,
+     [31m[1m"[0m[31mjsonb[0m[31m[1m"[0m=>
+      [32m#<Proc:0x00007f1ac1aefe88 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/type/hash_lookup_type_map.rb:29>[0m,
+     [31m[1m"[0m[31mcidr[0m[31m[1m"[0m=>
+      [32m#<Proc:0x00007f1ac1aefc58 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/type/hash_lookup_type_map.rb:29>[0m,
+     [31m[1m"[0m[31minet[0m[31m[1m"[0m=>
+      [32m#<Proc:0x00007f1ac1aefa28 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/type/hash_lookup_type_map.rb:29>[0m,
+     [31m[1m"[0m[31muuid[0m[31m[1m"[0m=>
+      [32m#<Proc:0x00007f1ac1aef7f8 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/type/hash_lookup_type_map.rb:29>[0m,
+     [31m[1m"[0m[31mxml[0m[31m[1m"[0m=>
+      [32m#<Proc:0x00007f1ac1aef5f0 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/type/hash_lookup_type_map.rb:29>[0m,
+     [31m[1m"[0m[31mtsvector[0m[31m[1m"[0m=>
+      [32m#<Proc:0x00007f1ac1aef3c0 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/type/hash_lookup_type_map.rb:29>[0m,
+     [31m[1m"[0m[31mmacaddr[0m[31m[1m"[0m=>
+      [32m#<Proc:0x00007f1ac1aef1b8 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/type/hash_lookup_type_map.rb:29>[0m,
+     [31m[1m"[0m[31mcitext[0m[31m[1m"[0m=>
+      [32m#<Proc:0x00007f1ac1aef118 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/type/hash_lookup_type_map.rb:29>[0m,
+     [31m[1m"[0m[31mltree[0m[31m[1m"[0m=>
+      [32m#<Proc:0x00007f1ac1aef078 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/type/hash_lookup_type_map.rb:29>[0m,
+     [31m[1m"[0m[31mline[0m[31m[1m"[0m=>
+      [32m#<Proc:0x00007f1ac1aeefd8 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/type/hash_lookup_type_map.rb:29>[0m,
+     [31m[1m"[0m[31mlseg[0m[31m[1m"[0m=>
+      [32m#<Proc:0x00007f1ac1aeef38 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/type/hash_lookup_type_map.rb:29>[0m,
+     [31m[1m"[0m[31mbox[0m[31m[1m"[0m=>
+      [32m#<Proc:0x00007f1ac1aeee98 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/type/hash_lookup_type_map.rb:29>[0m,
+     [31m[1m"[0m[31mpath[0m[31m[1m"[0m=>
+      [32m#<Proc:0x00007f1ac1aeedf8 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/type/hash_lookup_type_map.rb:29>[0m,
+     [31m[1m"[0m[31mpolygon[0m[31m[1m"[0m=>
+      [32m#<Proc:0x00007f1ac1aeed58 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/type/hash_lookup_type_map.rb:29>[0m,
+     [31m[1m"[0m[31mcircle[0m[31m[1m"[0m=>
+      [32m#<Proc:0x00007f1ac1aeecb8 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/type/hash_lookup_type_map.rb:29>[0m,
+     [31m[1m"[0m[31mnumeric[0m[31m[1m"[0m=>
+      [32m#<Proc:0x00007f1ac1aeec68 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/connection_adapters/postgresql_adapter.rb:688>[0m,
+     [31m[1m"[0m[31minterval[0m[31m[1m"[0m=>
+      [32m#<Proc:0x00007f1ac1aeec40 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/connection_adapters/postgresql_adapter.rb:708>[0m,
+     [31m[1m"[0m[31mtime[0m[31m[1m"[0m=>
+      [32m#<Proc:0x00007f1ac1aeeba0 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/connection_adapters/abstract_adapter.rb:887>[0m,
+     [31m[1m"[0m[31mtimestamp[0m[31m[1m"[0m=>
+      [32m#<Proc:0x00007f1ac1aeeb28 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/connection_adapters/abstract_adapter.rb:887>[0m,
+     [31m[1m"[0m[31mtimestamptz[0m[31m[1m"[0m=>
+      [32m#<Proc:0x00007f1ac1aeea88 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/connection_adapters/abstract_adapter.rb:887>[0m,
+     [34m[1m16[0m=>
+      [32m#<Proc:0x00007f1ac1aec378 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/type/hash_lookup_type_map.rb:40>[0m,
+     [34m[1m17[0m=>
+      [32m#<Proc:0x00007f1ac1aec328 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/type/hash_lookup_type_map.rb:40>[0m,
+     [34m[1m18[0m=>
+      [32m#<Proc:0x00007f1ac1aec2d8 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/type/hash_lookup_type_map.rb:40>[0m,
+     [34m[1m19[0m=>
+      [32m#<Proc:0x00007f1ac1aec288 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/type/hash_lookup_type_map.rb:40>[0m,
+     [34m[1m20[0m=>
+      [32m#<Proc:0x00007f1ac1aec238 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/type/hash_lookup_type_map.rb:40>[0m,
+     [34m[1m21[0m=>
+      [32m#<Proc:0x00007f1ac1aec1e8 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/type/hash_lookup_type_map.rb:40>[0m,
+     [34m[1m23[0m=>
+      [32m#<Proc:0x00007f1ac1aec198 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/type/hash_lookup_type_map.rb:40>[0m,
+     [34m[1m25[0m=>
+      [32m#<Proc:0x00007f1ac1aec148 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/type/hash_lookup_type_map.rb:40>[0m,
+     [34m[1m26[0m=>
+      [32m#<Proc:0x00007f1ac1aec0f8 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/type/hash_lookup_type_map.rb:40>[0m,
+     [34m[1m114[0m=>
+      [32m#<Proc:0x00007f1ac1aec0a8 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/type/hash_lookup_type_map.rb:40>[0m,
+     [34m[1m142[0m=>
+      [32m#<Proc:0x00007f1ac1aec058 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/type/hash_lookup_type_map.rb:40>[0m,
+     [34m[1m600[0m=>
+      [32m#<Proc:0x00007f1ac1aec008 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/type/hash_lookup_type_map.rb:40>[0m,
+     [34m[1m601[0m=>
+      [32m#<Proc:0x00007f1ac1aebfb8 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/type/hash_lookup_type_map.rb:40>[0m,
+     [34m[1m602[0m=>
+      [32m#<Proc:0x00007f1ac1aebf68 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/type/hash_lookup_type_map.rb:40>[0m,
+     [34m[1m603[0m=>
+      [32m#<Proc:0x00007f1ac1aebf18 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/type/hash_lookup_type_map.rb:40>[0m,
+     [34m[1m604[0m=>
+      [32m#<Proc:0x00007f1ac1aebec8 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/type/hash_lookup_type_map.rb:40>[0m,
+     [34m[1m628[0m=>
+      [32m#<Proc:0x00007f1ac1aebe78 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/type/hash_lookup_type_map.rb:40>[0m,
+     [34m[1m700[0m=>
+      [32m#<Proc:0x00007f1ac1aebe28 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/type/hash_lookup_type_map.rb:40>[0m,
+     [34m[1m701[0m=>
+      [32m#<Proc:0x00007f1ac1aebdd8 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/type/hash_lookup_type_map.rb:40>[0m,
+     [34m[1m718[0m=>
+      [32m#<Proc:0x00007f1ac1aebd88 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/type/hash_lookup_type_map.rb:40>[0m,
+     [34m[1m790[0m=>
+      [32m#<Proc:0x00007f1ac1aebd38 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/type/hash_lookup_type_map.rb:40>[0m,
+     [34m[1m829[0m=>
+      [32m#<Proc:0x00007f1ac1aebce8 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/type/hash_lookup_type_map.rb:40>[0m,
+     [34m[1m869[0m=>
+      [32m#<Proc:0x00007f1ac1aebc98 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/type/hash_lookup_type_map.rb:40>[0m,
+     [34m[1m650[0m=>
+      [32m#<Proc:0x00007f1ac1aebc48 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/type/hash_lookup_type_map.rb:40>[0m,
+     [34m[1m1042[0m=>
+      [32m#<Proc:0x00007f1ac1aebbf8 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/type/hash_lookup_type_map.rb:40>[0m,
+     [34m[1m1043[0m=>
+      [32m#<Proc:0x00007f1ac1aebba8 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/type/hash_lookup_type_map.rb:40>[0m,
+     [34m[1m1082[0m=>
+      [32m#<Proc:0x00007f1ac1aebb58 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/type/hash_lookup_type_map.rb:40>[0m,
+     [34m[1m1083[0m=>
+      [32m#<Proc:0x00007f1ac1aebb08 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/type/hash_lookup_type_map.rb:40>[0m,
+     [34m[1m1114[0m=>
+      [32m#<Proc:0x00007f1ac1aebab8 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/type/hash_lookup_type_map.rb:40>[0m,
+     [34m[1m1184[0m=>
+      [32m#<Proc:0x00007f1ac1aeba68 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/type/hash_lookup_type_map.rb:40>[0m,
+     [34m[1m1186[0m=>
+      [32m#<Proc:0x00007f1ac1aeba18 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/type/hash_lookup_type_map.rb:40>[0m,
+     [34m[1m1560[0m=>
+      [32m#<Proc:0x00007f1ac1aeb9c8 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/type/hash_lookup_type_map.rb:40>[0m,
+     [34m[1m1562[0m=>
+      [32m#<Proc:0x00007f1ac1aeb978 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/type/hash_lookup_type_map.rb:40>[0m,
+     [34m[1m1700[0m=>
+      [32m#<Proc:0x00007f1ac1aeb928 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/type/hash_lookup_type_map.rb:40>[0m,
+     [34m[1m2950[0m=>
+      [32m#<Proc:0x00007f1ac1aeb8d8 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/type/hash_lookup_type_map.rb:40>[0m,
+     [34m[1m3614[0m=>
+      [32m#<Proc:0x00007f1ac1aeb888 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/type/hash_lookup_type_map.rb:40>[0m,
+     [34m[1m3802[0m=>
+      [32m#<Proc:0x00007f1ac1aeb838 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/type/hash_lookup_type_map.rb:40>[0m,
+     [34m[1m14291[0m=>
+      [32m#<Proc:0x00007f1ac1aea5a0 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/type/hash_lookup_type_map.rb:29>[0m,
+     [34m[1m14294[0m=>
+      [32m#<Proc:0x00007f1ac1aea0c8 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/type/hash_lookup_type_map.rb:29>[0m,
+     [34m[1m14296[0m=>
+      [32m#<Proc:0x00007f1ac1ae9bf0 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/type/hash_lookup_type_map.rb:29>[0m,
+     [34m[1m14302[0m=>
+      [32m#<Proc:0x00007f1ac1ae95d8 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/type/hash_lookup_type_map.rb:29>[0m,
+     [34m[1m14304[0m=>
+      [32m#<Proc:0x00007f1ac1ae9268 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/type/hash_lookup_type_map.rb:29>[0m,
+     [34m[1m3904[0m=>
+      [32m#<Proc:0x00007f1ac1ae9150 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/connection_adapters/postgresql/oid/type_map_initializer.rb:111>[0m,
+     [34m[1m3906[0m=>
+      [32m#<Proc:0x00007f1ac1ae9088 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/connection_adapters/postgresql/oid/type_map_initializer.rb:111>[0m,
+     [34m[1m3908[0m=>
+      [32m#<Proc:0x00007f1ac1ae8fe8 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/connection_adapters/postgresql/oid/type_map_initializer.rb:111>[0m,
+     [34m[1m3910[0m=>
+      [32m#<Proc:0x00007f1ac1ae8f48 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/connection_adapters/postgresql/oid/type_map_initializer.rb:111>[0m,
+     [34m[1m3912[0m=>
+      [32m#<Proc:0x00007f1ac1ae8ea8 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/connection_adapters/postgresql/oid/type_map_initializer.rb:111>[0m,
+     [34m[1m3926[0m=>
+      [32m#<Proc:0x00007f1ac1ae8e08 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/connection_adapters/postgresql/oid/type_map_initializer.rb:111>[0m,
+     [34m[1m1000[0m=>
+      [32m#<Proc:0x00007f1ac1ae59d8 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/connection_adapters/postgresql/oid/type_map_initializer.rb:111>[0m,
+     [34m[1m1001[0m=>
+      [32m#<Proc:0x00007f1ac1ae5938 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/connection_adapters/postgresql/oid/type_map_initializer.rb:111>[0m,
+     [34m[1m1002[0m=>
+      [32m#<Proc:0x00007f1ac1ae5898 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/connection_adapters/postgresql/oid/type_map_initializer.rb:111>[0m,
+     [34m[1m1003[0m=>
+      [32m#<Proc:0x00007f1ac1ae57f8 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/connection_adapters/postgresql/oid/type_map_initializer.rb:111>[0m,
+     [34m[1m1016[0m=>
+      [32m#<Proc:0x00007f1ac1ae5758 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/connection_adapters/postgresql/oid/type_map_initializer.rb:111>[0m,
+     [34m[1m1005[0m=>
+      [32m#<Proc:0x00007f1ac1ae56b8 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/connection_adapters/postgresql/oid/type_map_initializer.rb:111>[0m,
+     [34m[1m1007[0m=>
+      [32m#<Proc:0x00007f1ac1ae5618 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/connection_adapters/postgresql/oid/type_map_initializer.rb:111>[0m,
+     [34m[1m1009[0m=>
+      [32m#<Proc:0x00007f1ac1ae5578 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/connection_adapters/postgresql/oid/type_map_initializer.rb:111>[0m,
+     [34m[1m1028[0m=>
+      [32m#<Proc:0x00007f1ac1ae54d8 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/connection_adapters/postgresql/oid/type_map_initializer.rb:111>[0m,
+     [34m[1m199[0m=>
+      [32m#<Proc:0x00007f1ac1ae5438 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/connection_adapters/postgresql/oid/type_map_initializer.rb:111>[0m,
+     [34m[1m143[0m=>
+      [32m#<Proc:0x00007f1ac1ae5398 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/connection_adapters/postgresql/oid/type_map_initializer.rb:111>[0m,
+     [34m[1m1017[0m=>
+      [32m#<Proc:0x00007f1ac1ae5258 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/connection_adapters/postgresql/oid/type_map_initializer.rb:111>[0m,
+     [34m[1m1018[0m=>
+      [32m#<Proc:0x00007f1ac1ae51b8 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/connection_adapters/postgresql/oid/type_map_initializer.rb:111>[0m,
+     [34m[1m1019[0m=>
+      [32m#<Proc:0x00007f1ac1ae5118 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/connection_adapters/postgresql/oid/type_map_initializer.rb:111>[0m,
+     [34m[1m1020[0m=>
+      [32m#<Proc:0x00007f1ac1ae5078 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/connection_adapters/postgresql/oid/type_map_initializer.rb:111>[0m,
+     [34m[1m1027[0m=>
+      [32m#<Proc:0x00007f1ac1ae4fd8 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/connection_adapters/postgresql/oid/type_map_initializer.rb:111>[0m,
+     [34m[1m629[0m=>
+      [32m#<Proc:0x00007f1ac1ae4f38 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/connection_adapters/postgresql/oid/type_map_initializer.rb:111>[0m,
+     [34m[1m1021[0m=>
+      [32m#<Proc:0x00007f1ac1ae4e98 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/connection_adapters/postgresql/oid/type_map_initializer.rb:111>[0m,
+     [34m[1m1022[0m=>
+      [32m#<Proc:0x00007f1ac1ae4df8 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/connection_adapters/postgresql/oid/type_map_initializer.rb:111>[0m,
+     [34m[1m719[0m=>
+      [32m#<Proc:0x00007f1ac1ae4d58 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/connection_adapters/postgresql/oid/type_map_initializer.rb:111>[0m,
+     [34m[1m791[0m=>
+      [32m#<Proc:0x00007f1ac1ae4cb8 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/connection_adapters/postgresql/oid/type_map_initializer.rb:111>[0m,
+     [34m[1m1040[0m=>
+      [32m#<Proc:0x00007f1ac1ae4c18 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/connection_adapters/postgresql/oid/type_map_initializer.rb:111>[0m,
+     [34m[1m1041[0m=>
+      [32m#<Proc:0x00007f1ac1ae4b78 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/connection_adapters/postgresql/oid/type_map_initializer.rb:111>[0m,
+     [34m[1m651[0m=>
+      [32m#<Proc:0x00007f1ac1ae4ad8 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/connection_adapters/postgresql/oid/type_map_initializer.rb:111>[0m,
+     [34m[1m1014[0m=>
+      [32m#<Proc:0x00007f1ac1ae4a38 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/connection_adapters/postgresql/oid/type_map_initializer.rb:111>[0m,
+     [34m[1m1015[0m=>
+      [32m#<Proc:0x00007f1ac1ae4998 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/connection_adapters/postgresql/oid/type_map_initializer.rb:111>[0m,
+     [34m[1m1182[0m=>
+      [32m#<Proc:0x00007f1ac1ae48f8 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/connection_adapters/postgresql/oid/type_map_initializer.rb:111>[0m,
+     [34m[1m1183[0m=>
+      [32m#<Proc:0x00007f1ac1ae4858 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/connection_adapters/postgresql/oid/type_map_initializer.rb:111>[0m,
+     [34m[1m1115[0m=>
+      [32m#<Proc:0x00007f1ac1ae4790 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/connection_adapters/postgresql/oid/type_map_initializer.rb:111>[0m,
+     [34m[1m1185[0m=>
+      [32m#<Proc:0x00007f1ac1ae46c8 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/connection_adapters/postgresql/oid/type_map_initializer.rb:111>[0m,
+     [34m[1m1187[0m=>
+      [32m#<Proc:0x00007f1ac1ae4628 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/connection_adapters/postgresql/oid/type_map_initializer.rb:111>[0m,
+     [34m[1m1561[0m=>
+      [32m#<Proc:0x00007f1ac1ae4588 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/connection_adapters/postgresql/oid/type_map_initializer.rb:111>[0m,
+     [34m[1m1563[0m=>
+      [32m#<Proc:0x00007f1ac1ae44e8 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/connection_adapters/postgresql/oid/type_map_initializer.rb:111>[0m,
+     [34m[1m1231[0m=>
+      [32m#<Proc:0x00007f1ac1ae4448 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/connection_adapters/postgresql/oid/type_map_initializer.rb:111>[0m,
+     [34m[1m2951[0m=>
+      [32m#<Proc:0x00007f1ac1ae4380 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/connection_adapters/postgresql/oid/type_map_initializer.rb:111>[0m,
+     [34m[1m3643[0m=>
+      [32m#<Proc:0x00007f1ac1ae42e0 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/connection_adapters/postgresql/oid/type_map_initializer.rb:111>[0m,
+     [34m[1m3807[0m=>
+      [32m#<Proc:0x00007f1ac1ae4240 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/connection_adapters/postgresql/oid/type_map_initializer.rb:111>[0m,
+     [34m[1m3905[0m=>
+      [32m#<Proc:0x00007f1ac1ae4178 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/connection_adapters/postgresql/oid/type_map_initializer.rb:111>[0m,
+     [34m[1m3907[0m=>
+      [32m#<Proc:0x00007f1ac1ae40b0 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/connection_adapters/postgresql/oid/type_map_initializer.rb:111>[0m,
+     [34m[1m3909[0m=>
+      [32m#<Proc:0x00007f1ac1ae4010 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/connection_adapters/postgresql/oid/type_map_initializer.rb:111>[0m,
+     [34m[1m3911[0m=>
+      [32m#<Proc:0x00007f1ac1ae3f70 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/connection_adapters/postgresql/oid/type_map_initializer.rb:111>[0m,
+     [34m[1m3913[0m=>
+      [32m#<Proc:0x00007f1ac1ae3ed0 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/connection_adapters/postgresql/oid/type_map_initializer.rb:111>[0m,
+     [34m[1m3927[0m=>
+      [32m#<Proc:0x00007f1ac1ae3e30 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/connection_adapters/postgresql/oid/type_map_initializer.rb:111>[0m,
+     [34m[1m14290[0m=>
+      [32m#<Proc:0x00007f1ac1ae3d90 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/connection_adapters/postgresql/oid/type_map_initializer.rb:111>[0m,
+     [34m[1m14293[0m=>
+      [32m#<Proc:0x00007f1ac1ae3cf0 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/connection_adapters/postgresql/oid/type_map_initializer.rb:111>[0m,
+     [34m[1m14295[0m=>
+      [32m#<Proc:0x00007f1ac1ae3c50 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/connection_adapters/postgresql/oid/type_map_initializer.rb:111>[0m,
+     [34m[1m14301[0m=>
+      [32m#<Proc:0x00007f1ac1ae3bb0 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/connection_adapters/postgresql/oid/type_map_initializer.rb:111>[0m,
+     [34m[1m14303[0m=>
+      [32m#<Proc:0x00007f1ac1ae3b10 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/connection_adapters/postgresql/oid/type_map_initializer.rb:111>[0m,
+     [34m[1m22[0m=>
+      [32m#<Proc:0x00007f1ac1ae3750 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/type/hash_lookup_type_map.rb:29>[0m,
+     [34m[1m30[0m=>
+      [32m#<Proc:0x00007f1ac1ae33e0 /home/guilherme/.local/share/gem/ruby/3.3.0/gems/activerecord-7.1.3.4/lib/active_record/type/hash_lookup_type_map.rb:29>[0m}[32m>[0m,
+ @type_map_for_results[32m=[0m[32m#<PG::TypeMapByOid:0x00007f1ac1b62960[0m[32m>[0m,
+ @unconfigured_connection[32m=[0m[36m[1mnil[0m,
+ @use_insert_returning[32m=[0m[36m[1mtrue[0m,
+ @verified[32m=[0m[36m[1mnil[0m,
+ @visitor[32m=[0m
+  [32m#<Arel::Visitors::PostgreSQL:0x00007f1ac1b30190[0m
+   @connection[32m=[0m
+    [32m#<ActiveRecord::ConnectionAdapters::PostgreSQLAdapter:0x00007f1ac218ba58[0m ...[32m>[0m,
+   @dispatch[32m=[0m{}[32m>[0m[32m>[0m

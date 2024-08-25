@@ -2,11 +2,11 @@ Rails.application.routes.draw do
 
   root "home#welcome"
 
+  devise_for :job_seekers
   resources :jobs
   resources :home
   resources :job_seekers, only: %i[ edit update destroy show ]
 
-  devise_for :job_seekers
   devise_for :employers
 
   devise_scope :job_seeker do
