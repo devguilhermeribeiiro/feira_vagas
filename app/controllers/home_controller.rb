@@ -18,9 +18,9 @@ class HomeController < ApplicationController
     @apply = @job.applications.create(job_seeker: current_job_seeker)
 
     if @apply.save
-      redirect_to home_path(@job), alert: 'Candidatura enviada com sucesso!'
+      redirect_to home_path(@job), notice: 'Candidatura enviada com sucesso!'
     else
-      redirect_to home_path(@job), alert: 'Não foi possivel enviar sua candidatura'
+      redirect_to home_path(@job), notice: 'Não foi possivel enviar sua candidatura'
     end
   end
 end
