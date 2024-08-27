@@ -8,6 +8,9 @@ class JobSeeker < ApplicationRecord
 
   validate :correct_profile_img_mime_type
 
+  has_many :applications, dependent: :destroy
+  has_many :jobs, through: :applications
+
   private
 
   def correct_profile_img_mime_type
