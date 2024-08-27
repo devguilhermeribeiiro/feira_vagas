@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'employers/show'
+  get 'employers/edit'
 
   root "home#welcome"
 
