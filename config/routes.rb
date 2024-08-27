@@ -4,7 +4,11 @@ Rails.application.routes.draw do
 
   devise_for :job_seekers
   resources :jobs
-  resources :home
+  resources :home do
+    member do
+      post 'apply'
+    end
+  end
   resources :job_seekers, only: %i[ edit update destroy show ]
 
   devise_for :employers
