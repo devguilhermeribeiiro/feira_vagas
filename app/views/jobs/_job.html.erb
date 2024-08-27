@@ -14,6 +14,6 @@
   <div class="flex flex-col text-gray-600">
     <p class="mb-1"><strong>Localização:</strong> <%= job.location %></p>
     <p class="mb-1"><strong>Modalidade:</strong> <%= job.mode %></p>
-    <p><strong>Candidaturas:</strong> <%# job.applications %></p>
+    <p><strong>Candidaturas:</strong> <%= job.applications.count %></p>
   </div>
 </div>
