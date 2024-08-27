@@ -1,11 +1,9 @@
 Rails.application.routes.draw do
-  get 'employers/show'
-  get 'employers/edit'
-
   root "home#welcome"
 
   devise_for :job_seekers
-  resources :jobs
+  devise_for :employers
+
   resources :home do
     member do
       post 'apply'
@@ -16,8 +14,9 @@ Rails.application.routes.draw do
       get 'applys'
     end
   end
-
-  devise_for :employers
+  
+  resources :jobs
+  resources :employers
 
   devise_scope :job_seeker do
     get '/job_seekers/sign_out' => 'devise/sessions#destroy'
