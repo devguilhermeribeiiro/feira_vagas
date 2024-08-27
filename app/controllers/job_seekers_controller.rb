@@ -1,6 +1,10 @@
 class JobSeekersController < ApplicationController
   before_action :set_job_seeker, only: %i[ show edit update destroy ]
 
+  def applys
+    @applications = current_job_seeker.jobs
+  end
+
   def show; end
 
   def edit; end

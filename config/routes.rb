@@ -9,7 +9,11 @@ Rails.application.routes.draw do
       post 'apply'
     end
   end
-  resources :job_seekers, only: %i[ edit update destroy show ]
+  resources :job_seekers, only: %i[ edit update destroy show ] do
+    member do
+      get 'applys'
+    end
+  end
 
   devise_for :employers
 
