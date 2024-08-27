@@ -1,13 +1,9 @@
 <div class="container mx-auto min-h-screen flex flex-col items-center">
   <%= render 'header',
               first_link: link_to('Meu Perfil', job_seeker_path(current_job_seeker)),
-              second_link: link_to('Sair', destroy_job_seeker_session_path) %>
+              second_link: button_to('Sair', destroy_job_seeker_session_path, method: :delete) %>
 
   <main class="w-full xl:w-3/4 bg-white shadow-lg rounded-lg p-8 mt-32">
-    <% if notice.present? %>
-      <p class="py-2 px-3 bg-green-100 mb-5 text-green-500 text-center font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
-    <% end %>
-
     <%= render 'job_information', job: @job %>
   </main>
 
