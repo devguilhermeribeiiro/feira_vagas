@@ -3,11 +3,11 @@
           first_link: link_to('Nova Vaga', new_job_path),
           second_link: button_to('Sair', destroy_employer_session_path, method: :delete)%>
 
+  <% if notice.present? %>
+    <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 text-center font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
+  <% end %>
 
   <main class="w-11/12 xl:w-full lg:px-8 mt-24 mx-auto grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
-    <% if notice.present? %>
-      <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 text-center font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
-    <% end %>
 
     <% @jobs.each do |job| %>
       <%= link_to job_path(job), class: "md:transform md:hover:scale-105 transition-transform duration-200 ease-in-out" do %>
