@@ -10,13 +10,14 @@ class HomeController < ApplicationController
 
   def show
     @job = Job.find(params[:id])
+    @application = @job.applications.find_by(job_seeker_id: current_job_seeker.id)
   end
 
   def apply
     @job = Job.find(params[:id])
-    @application = @job.applications.create(job_seeker: current_job_seeker)
+    @apply = @job.applications.create(job_seeker: current_job_seeker)
 
-    if @application.save
+    if @apply.save
       redirect_to home_path(@job), alert: 'Candidatura enviada com sucesso!'
     else
       redirect_to home_path(@job), alert: 'Não foi possivel enviar sua candidatura'
