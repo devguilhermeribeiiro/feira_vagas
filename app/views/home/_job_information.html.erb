@@ -52,3 +52,11 @@
     <p class="whitespace-pre-wrap text-gray-700"><%= @job.benefits %></p>
   </div>
 </section>
+
+<section class="flex flex-row justify-start mt-4">
+  <% if @application&.status.eql?(false || nil) %>
+    <%= button_to 'Candidate-se', apply_home_path(@job) , method: :post, class: 'bg-green-500 hover:bg-green-600 p-3 rounded-md text-white font-bold text-md' %>
+  <% else %>
+    <button class='bg-gray-500 hover:bg-gray-600 cursor-not-allowed p-3 rounded-md text-white font-bold text-md'>Candidatado</button>
+  <% end %>
+</section>

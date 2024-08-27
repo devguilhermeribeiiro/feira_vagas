@@ -5,14 +5,6 @@
 
   <main class="w-full xl:w-3/4 bg-white shadow-lg rounded-lg p-8 mt-32">
     <%= render 'job_information', job: @job %>
-
-    <div class="flex flex-row justify-start mt-4">
-      <% if @application&.status.eql?(false || nil) %>
-        <%= button_to 'Candidate-se', apply_home_path(@job) , method: :post, class: 'bg-green-500 hover:bg-green-600 p-3 rounded-md text-white font-bold text-md' %>
-      <% else %>
-        <button class='bg-gray-500 hover:bg-gray-600 cursor-not-allowed p-3 rounded-md text-white font-bold text-md'>Candidatado</button>
-      <% end %>
-    </div>
   </main>
   <div class="mt-8">
     <%= link_to 'Voltar para Vagas', start_path, class: 'text-green-600 bg-green-200 hover:bg-green-300  py-3 p-4 rounded-md text-md font-bold' %>
