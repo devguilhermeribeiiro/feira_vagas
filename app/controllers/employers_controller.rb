@@ -26,6 +26,6 @@ class EmployersController < ApplicationController
   end
   
   def employer_params 
-    params.require(:employer).permit(%i[ company_name email location ])
+    params.require(:employer).permit(%i[ company_name email location phone profile_img site ])
   end
 end
