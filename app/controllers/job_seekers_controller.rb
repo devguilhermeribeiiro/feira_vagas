@@ -1,4 +1,5 @@
 class JobSeekersController < ApplicationController
+  before_action :authenticate_job_seeker!
   before_action :set_job_seeker, only: %i[show edit update destroy]
 
   def applys
@@ -25,7 +26,7 @@ class JobSeekersController < ApplicationController
   private
 
   def set_job_seeker
-    @job_seeker = JobSeeker.find(current_job_seeker.id)
+    @job_seeker = current_job_seeker
   end
 
   def job_seeker_params
