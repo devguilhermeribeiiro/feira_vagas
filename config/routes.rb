@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 Rails.application.routes.draw do
-  root "home#welcome"
+  root 'home#welcome'
 
   devise_for :job_seekers
   devise_for :employers
@@ -9,12 +11,12 @@ Rails.application.routes.draw do
       post 'apply'
     end
   end
-  resources :job_seekers, only: %i[ edit update destroy show ] do
+  resources :job_seekers, only: %i[edit update destroy show] do
     member do
       get 'applys'
     end
   end
-  
+
   resources :jobs
   resources :employers
 
@@ -26,6 +28,5 @@ Rails.application.routes.draw do
   end
 
   get 'start', to: 'home#index', as: :start
-  get "up" => "rails/health#show", as: :rails_health_check
-
+  get 'up' => 'rails/health#show', as: :rails_health_check
 end

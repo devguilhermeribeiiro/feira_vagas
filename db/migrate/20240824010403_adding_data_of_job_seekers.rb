@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class AddingDataOfJobSeekers < ActiveRecord::Migration[7.1]
   def change
     add_column :job_seekers, :degree, :string

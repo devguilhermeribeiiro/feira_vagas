@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Application < ApplicationRecord
   belongs_to :job
   belongs_to :job_seeker
@@ -7,6 +9,6 @@ class Application < ApplicationRecord
   private
 
   def set_status
-    self.status = true if self.status.eql?(false)
+    self.status = true if status.eql?(false)
   end
 end

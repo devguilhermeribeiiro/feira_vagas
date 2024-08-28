@@ -1,5 +1,5 @@
 class JobSeekersController < ApplicationController
-  before_action :set_job_seeker, only: %i[ show edit update destroy ]
+  before_action :set_job_seeker, only: %i[show edit update destroy]
 
   def applys
     @applications = current_job_seeker.jobs
@@ -29,6 +29,6 @@ class JobSeekersController < ApplicationController
   end
 
   def job_seeker_params
-    params.require(:job_seeker).permit(%i[ full_name phone email degree courses experiences profile_img ])
+    params.require(:job_seeker).permit(%i[full_name phone email degree courses experiences profile_img])
   end
 end
