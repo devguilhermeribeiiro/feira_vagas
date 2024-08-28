@@ -3,7 +3,9 @@
 Rails.application.routes.draw do
   root 'home#welcome'
 
-  devise_for :job_seekers
+  devise_for :job_seekers, controllers: {
+    registrations: 'job_seekers/registrations'
+  }
   devise_for :employers
 
   resources :home do
@@ -17,7 +19,11 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :jobs
+  resources :jobs do
+    member do
+      get 'applyers'
+    end
+  end
   resources :employers
 
   devise_scope :job_seeker do
