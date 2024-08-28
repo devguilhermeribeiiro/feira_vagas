@@ -2,10 +2,9 @@ class EmployersController < ApplicationController
   before_action :set_employer, only: %i[ show edit update destroy ]
   before_action :authenticate_employer!
 
-  def show
-  end
+  def show; end
 
-  def edit
+  def edit; end
 
   def update
     if @employer.update(employer_params)
@@ -27,6 +26,6 @@ class EmployersController < ApplicationController
   end
   
   def employer_params 
-    params.require(@employer).permit(%i[ company_name email location ])
+    params.require(:employer).permit(%i[ company_name email location ])
   end
 end
