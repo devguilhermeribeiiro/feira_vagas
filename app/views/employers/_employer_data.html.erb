@@ -6,12 +6,15 @@
       <p>No image</p>
     <% end %>
   </div>
-
+  
   <div class="text-center">
     <h2 class="text-2xl font-bold text-gray-800"><%= @employer.company_name %></h2>
-    <p class="text-gray-500"><%= @employer.email %></p>
-    <p class="text-gray-500"><%= link_to @employer.site, "https://#{@employer.site}", target: "_blank" %></p>
-    <p class="text-gray-500"><%= @employer.phone %></p>
-    <p class="text-gray-500"><%= @employer.location %></p>
+    <p class="text-blue-800"><%= link_to @employer.site, "https://#{@employer.site}", target: "_blank" %></p>
+  </div>
+  
+  <div class="w-full text-left my-8 space-y-4">
+    <p class="text-gray-600"><strong>Email:</strong> <%= @employer.email %></p>
+    <p class="text-gray-600"><strong>Tel:</strong> <%= @employer.phone %></p>
+    <p class="text-gray-600"><strong>Cidade:</strong> <%= @employer.location %></p>
   </div>
 </div>
