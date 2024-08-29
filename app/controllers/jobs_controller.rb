@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class JobsController < ApplicationController
-  before_action :set_job, only: %i[show edit update destroy]
+  before_action :set_job, only: %i[ applyers show edit update destroy]
   before_action :authenticate_employer!
 
   def index
@@ -13,6 +13,10 @@ class JobsController < ApplicationController
     @job = Job.new
   end
 
+  def applyers
+    @applyers = @job.job_seekers
+  end
+  
   def show; end
 
   def edit; end
