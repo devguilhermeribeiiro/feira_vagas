@@ -2,7 +2,7 @@
 
 <div class="container mx-auto min-h-screen flex flex-col items-center">
   <%= render 'header',
-            first_link: link_to('Meu Perfil', jobs_path),
+            first_link: link_to('Meu Perfil', employer_path(current_employer)),
             second_link: button_to('Sair', destroy_employer_session_path, method: :delete) %>
 
 

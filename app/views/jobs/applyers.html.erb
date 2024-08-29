@@ -1,6 +1,6 @@
 <div class="container mx-auto min-h-screen flex flex-col items-center">
   <%= render 'header',
-            first_link: link_to('Meu Perfil', jobs_path),
+            first_link: link_to('Meu Perfil', employer_path(current_employer)),
             second_link: button_to('Sair', destroy_employer_session_path, method: :delete) %>
   
   
@@ -11,9 +11,9 @@
       <% @applyers.each do |applyer| %>
         <%= link_to applyer_job_path(job_seeker_id: applyer.id) do %>
           <div class="p-4 flex flex-col gap-3 rounded-md bg-white shadow-md text-start">
-            <p><%= applyer.full_name %></p>
-            <p><%= applyer.email %></p>
-            <p><%= applyer.degree%></p>
+            <h2 class="text-xl font-semibold text-gray-800"><%= applyer.full_name %></h2>
+            <p class="text-gray-600 font-medium"><strong>Formação:</strong> <%= applyer.degree%></p>
+            <p class="text-gray-600 font-medium"><strong>Email:</strong> <%= applyer.email %></p>
           </div>
         <% end %>
       <% end %>

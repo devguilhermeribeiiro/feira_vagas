@@ -3,14 +3,15 @@
           first_link: link_to('Meu Perfil', employer_path(current_employer)),
           second_link: button_to('Sair', destroy_employer_session_path, method: :delete)%>
 
-  <% if notice.present? %>
-    <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 text-center font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
-  <% end %>
 
-  <main class="w-11/12 xl:w-full lg:px-8 mx-auto">
-    <div class="flex items-end mb-16 justify-end ">
-      <%= link_to 'Criar vaga', new_job_path, class: 'bg-green-500 hover:bg-green-600 text-white font-semibold p-3 rounded-md shadow-md'  %>
-    </div>
+  <main class="w-11/12 xl:w-full lg:px-8 mx-auto mt-28">
+      <% if notice.present? %>
+        <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 text-center font-medium rounded-lg inline-bloc" id="notice"><%= notice %></p>
+      <% end %>
+      
+      <aside class="flex items-end mb-16 justify-end ">
+        <%= link_to 'Criar vaga', new_job_path, class: 'bg-green-500 hover:bg-green-600 text-white font-semibold p-3 rounded-md shadow-md'  %>
+      </aside>
 
     <section class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
       <% @jobs.each do |job| %>
