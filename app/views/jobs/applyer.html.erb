@@ -1,0 +1,19 @@
+<div class="container mx-auto min-h-screen flex flex-col items-center justify-center">
+  <%= render 'header',
+            first_link: link_to('Meu Pefil', employer_path(current_employer)),
+            second_link: button_to('Sair', destroy_employer_session_path) %>
+
+
+  <div class="w-11/12 xl:w-3/4 bg-white shadow-lg rounded-lg p-8 mt-24">
+      <% if notice.present? %>
+        <p class="py-2 px-3 bg-green-100 mb-5 text-green-500 text-center font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
+      <% end %>
+      
+      <%= render 'applyer_data' %>
+  
+      <div class="mt-6 text-center">
+        <%= link_to 'Voltar para candidaturas', applyers_job_path, class: "text-white bg-green-600 hover:bg-green-700 px-6 py-2 rounded-md font-bold" %>
+      </div>
+    </div>
+
+</div>

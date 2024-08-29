@@ -1,0 +1,28 @@
+<div class="flex flex-col items-center space-y-6">
+  <div class="w-52 h-52 rounded-full bg-gray-200 flex items-center justify-center">
+    <% if @applyer.profile_img.attached? %>
+      <%= image_tag @applyer.profile_img, alt: "Foto de Perfil", class: "rounded-full object-cover w-full h-full" %>
+    <% else %>
+      <p>No image</p>
+    <% end %>
+  </div>
+
+  <div class="text-center">
+    <h2 class="text-2xl font-bold text-gray-800"><%= @applyer.full_name %></h2>
+    <p class="text-gray-500"><%= @applyer.email %></p>
+    <p class="text-gray-500"><%= @applyer.phone %></p>
+  </div>
+
+  <div class="w-full text-left mt-8 space-y-4">
+    <div>
+      <h3 class="text-lg font-bold text-gray-700">Formação Acadêmica</h3>
+      <p class="text-gray-600"><%= @applyer.degree %></p>
+      <p class="text-gray-600"><%= @applyer.courses %></p>
+    </div>
+
+    <div>
+      <h3 class="text-lg font-bold text-gray-700">Experiências</h3>
+      <p class="text-gray-600"><%= @applyer.experiences %></p>
+    </div>
+  </div>
+</div>

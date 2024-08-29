@@ -1,7 +1,8 @@
 # frozen_string_literal: true
 
 class JobsController < ApplicationController
-  before_action :set_job, only: %i[ applyers show edit update destroy]
+  before_action :set_job, only: %i[ show edit update destroy]
+  before_action :set_applyers, only: %i[ applyers applyer ]
   before_action :authenticate_employer!
 
   def index
@@ -13,8 +14,10 @@ class JobsController < ApplicationController
     @job = Job.new
   end
 
-  def applyers
-    @applyers = @job.job_seekers
+  def applyers; end
+  
+  def applyer
+    @applyer = @applyers.find(params[:job_seeker_id])
   end
   
   def show; end
@@ -49,7 +52,12 @@ class JobsController < ApplicationController
   def set_job
     @job = Job.find(params[:id])
   end
-
+  
+  def set_applyers
+    @job = Job.find(params[:id])
+    @applyers = @job.job_seekers
+  end
+  
   def job_params
     params.require(:job).permit(:title, :description, :location, :mode, :salary, :requirements, :skills, :benefits)
   end

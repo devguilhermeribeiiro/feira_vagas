@@ -1,16 +1,22 @@
-<div class="container mx-auto justify-center min-h-screen flex flex-col items-center">
+<div class="container mx-auto min-h-screen flex flex-col items-center">
   <%= render 'header',
             first_link: link_to('Meu Perfil', jobs_path),
             second_link: button_to('Sair', destroy_employer_session_path, method: :delete) %>
   
-  <h2 class="text-center text-2xl font-semibold text-green-600">Todas as candidaturas</h2>
   
-  <hero class="w-11/12 xl:w-full lg:px-8 mx-auto mt-5 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
-    <% @applyers.map do |applyer| %>
-      <div class="p-4 rounded-md bg-white shadow-md text-start">
-        <%= applyer.email %>
-        <%= applyer.created_at%>
-      </div>
-    <% end %>
+  <hero class="w-11/12 xl:w-full lg:px-8 mx-auto flex flex-col gap-20 mt-48 ">
+    <h2 class="text-center text-2xl font-semibold text-green-600">Todas as candidaturas</h2>
+     
+    <section class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
+      <% @applyers.each do |applyer| %>
+        <%= link_to applyer_job_path(job_seeker_id: applyer.id) do %>
+          <div class="p-4 flex flex-col gap-3 rounded-md bg-white shadow-md text-start">
+            <p><%= applyer.full_name %></p>
+            <p><%= applyer.email %></p>
+            <p><%= applyer.degree%></p>
+          </div>
+        <% end %>
+      <% end %>
+    </section>
   </hero>
 </div>

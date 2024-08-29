@@ -21,7 +21,8 @@ Rails.application.routes.draw do
 
   resources :jobs do
     member do
-      get 'applyers'
+      get :applyers
+      get 'applyer/:job_seeker_id', to: 'jobs#applyer', as: :applyer
     end
   end
   resources :employers
