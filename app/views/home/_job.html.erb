@@ -1,7 +1,14 @@
 <div id="<%= dom_id(job) %>" class="transition-transform transform hover:scale-105">
   <!-- Job Header -->
   <div class="flex flex-row justify-between items-center mb-4">
-    <p class="text-lg font-semibold text-green-700"><%= job.employer.company_name %></p>
+    <div class="flex flex-row items-center gap-3">
+      <% if job.employer.profile_img.attached? %>
+        <div class="w-12 h-12 rounded-full bg-gray-200 flex items-center justify-center">
+          <%= image_tag job.employer.profile_img, alt: "Foto de Perfil", class: "rounded-full object-cover w-full h-full" %>
+        </div>
+      <% end %>
+      <p class="text-lg font-semibold text-green-700"><%= job.employer.company_name %></p>
+    </div>
     <p class="text-sm text-gray-500"><%= job.created_at.strftime('%d/%m') %></p>
   </div>
   
