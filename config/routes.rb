@@ -6,7 +6,9 @@ Rails.application.routes.draw do
   devise_for :job_seekers, controllers: {
     registrations: 'job_seekers/registrations'
   }
-  devise_for :employers
+  devise_for :employers, controllers: {
+    registrations: 'employers/registrations'
+  }
 
   resources :home do
     member do
