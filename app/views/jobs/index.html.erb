@@ -6,7 +6,9 @@
 
   <main class="w-11/12 xl:w-full lg:px-8 mx-auto mt-28">
       <% if notice.present? %>
-        <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 text-center font-medium rounded-lg inline-bloc" id="notice"><%= notice %></p>
+        <span class="flex place-items-start">
+          <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 text-center mx-auto font-medium rounded-lg inline-bloc" id="notice"><%= notice %></p>
+        </span>
       <% end %>
       
       <aside class="flex items-end mb-16 justify-end ">
