@@ -7,12 +7,12 @@
 
   <div class="flex flex-col">
     <%= form.label :company_name, "Nome da empresa", class: "text-gray-700 font-bold mb-2" %>
-    <%= form.text_field :company_name, class: "px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-600" %>
+    <%= form.text_field :company_name, class: "px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-600", required: true %>
   </div>
 
   <div class="flex flex-col">
     <%= form.label :email, "Email", class: "text-gray-700 font-bold mb-2" %>
-    <%= form.text_field :email, class: "px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-600" %>
+    <%= form.text_field :email, class: "px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-600", required: true %>
   </div>
 
   <div class="flex flex-col">
@@ -22,12 +22,12 @@
   
   <div class="flex flex-col">
     <%= form.label :phone, "Telefone", class: "text-gray-700 font-bold mb-2" %>
-    <%= form.text_field :phone, class: "px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-600" %>
+    <%= form.text_field :phone, class: "px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-600", required: true %>
   </div>
 
   <div class="flex flex-col">
     <%= form.label :location, "Localidade", class: "text-gray-700 font-bold mb-2" %>
-    <%= form.text_area :location, class: "px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-600" %>
+    <%= form.text_area :location, class: "px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-600", required: true %>
   </div>
   
   <div class="text-center">
