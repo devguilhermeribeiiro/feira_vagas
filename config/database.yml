@@ -81,6 +81,4 @@ test:
 #
 production:
   <<: *default
-  database: feira_vagas_production
-  username: feira_vagas
-  password: <%= ENV["FEIRA_VAGAS_DATABASE_PASSWORD"] %>
+  url: <%= ENV["DATABASE_URL"] %>
