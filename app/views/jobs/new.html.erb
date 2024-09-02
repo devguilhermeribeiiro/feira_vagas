@@ -4,12 +4,11 @@
           second_link: button_to('Sair', destroy_employer_session_path, method: :delete) %>
 
   <div class="w-11/12 xl:w-3/4 bg-white shadow-lg rounded-lg p-8 mt-24">
-     <h2 class="text-center text-xl font-semibold text-gray-700">Nova Vaga</h2> 
-
+    <h2 class="text-center text-xl font-semibold text-gray-700">Nova Vaga</h2> 
     <%= render 'form', job: @job %>
+  </div>
 
-    <div class="mt-6 text-center">
-      <%= link_to 'Voltar para vagas', jobs_path, class: "text-green-600 hover:underline" %>
-    </div>
+  <div class="mt-8 text-center">
+    <%= link_to 'Voltar para vagas', jobs_path, class: "text-green-600 hover:underline" %>
   </div>
 </div>
