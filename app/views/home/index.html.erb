@@ -4,6 +4,10 @@
               second_link: button_to('Sair', destroy_job_seeker_session_path, method: :delete) 
   %>
   
+  <% if notice.present? %>
+    <p class="py-2 px-3 bg-green-100 mt-24 text-green-500 text-center font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
+  <% end %>
+  
   <main class="w-11/12 xl:w-full lg:px-8 mt-24 mx-auto grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
     <% @jobs.each do |job| %>
       <%= link_to home_path(job), class: "md:transform md:hover:scale-105 transition-transform duration-200 ease-in-out" do %>
