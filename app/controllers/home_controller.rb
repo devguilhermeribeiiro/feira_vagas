@@ -3,13 +3,7 @@
 class HomeController < ApplicationController
   before_action :authenticate_job_seeker!, except: :welcome
 
-  def welcome
-    if employer_signed_in?
-      redirect_to jobs_path
-    elsif job_seeker_signed_in?
-      redirect_to start_path
-    end
-  end
+  def welcome; end
 
   def index
     jobs = Job.all
