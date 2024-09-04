@@ -13,8 +13,7 @@ class Employers::RegistrationsController < Devise::RegistrationsController
   def create
     super do |employer|
       if employer.persisted?
-        sign_in(employer)
-        redirect_to edit_employer_path(employer), notice: 'Boas vindas! Complete seu perfil para continuar.' and return
+        sign_in(employer), notice: 'Boas vindas! Antes de continuar vá ao seu perfil e complete o restante dos seus dados.'
       end
     end
   end

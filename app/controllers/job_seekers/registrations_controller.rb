@@ -13,8 +13,7 @@ class JobSeekers::RegistrationsController < Devise::RegistrationsController
   def create
     super do |job_seeker|
       if job_seeker.persisted?
-        sign_in(job_seeker)
-        redirect_to edit_job_seeker_path(job_seeker), notice: 'Boas vindas! Complete seu perfil para continuar.' and return
+        sign_in(job_seeker), notice: 'Boas vindas! Antes de continuar vá ao seu perfil e complete o restante dos seus dados.'
       end
     end
   end
