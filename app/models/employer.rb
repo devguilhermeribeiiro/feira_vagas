@@ -8,7 +8,7 @@ class Employer < ApplicationRecord
 
   validate :correct_profile_img_mime_type
   has_one_attached :profile_img
-  has_many :jobs
+  has_many :jobs, dependent: :destroy
   
   private
 
