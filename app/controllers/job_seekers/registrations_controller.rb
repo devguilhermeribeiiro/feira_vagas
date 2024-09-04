@@ -13,7 +13,8 @@ class JobSeekers::RegistrationsController < Devise::RegistrationsController
   def create
     super do |job_seeker|
       if job_seeker.persisted?
-        sign_in(job_seeker), notice: 'Boas vindas! Antes de continuar vá ao seu perfil e complete o restante dos seus dados.'
+        sign_in(job_seeker)
+        redirect_to start_path
       end
     end
   end
@@ -29,9 +30,14 @@ class JobSeekers::RegistrationsController < Devise::RegistrationsController
   # end
 
   # DELETE /resource
-  # def destroy
-  #   super
-  # end
+  def destroy
+    super do |job_seeker|
+      if job_seeker.destroyed?
+        redirect_to root_path, notice: 'Sua conta foi excluida com sucesso. Você foi redirecionado para a pagina inicial'
+        return
+      end
+    end
+  end
 
   # GET /resource/cancel
   # Forces the session data which is usually expired after sign

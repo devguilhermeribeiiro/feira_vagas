@@ -13,7 +13,8 @@ class Employers::RegistrationsController < Devise::RegistrationsController
   def create
     super do |employer|
       if employer.persisted?
-        sign_in(employer), notice: 'Boas vindas! Antes de continuar vá ao seu perfil e complete o restante dos seus dados.'
+        sign_in(employer)
+        redirect_to jobs_path
       end
     end
   end
@@ -29,9 +30,14 @@ class Employers::RegistrationsController < Devise::RegistrationsController
   # end
 
   # DELETE /resource
-  # def destroy
-  #   super
-  # end
+  def destroy
+    super do |employer|
+      if employer.destroyed?
+        redirect_to root_path, notice: 'Sua conta foi excluida com sucesso. Você foi redirecionado para a pagina inicial'
+        return
+      end
+    end
+  end
 
   # GET /resource/cancel
   # Forces the session data which is usually expired after sign

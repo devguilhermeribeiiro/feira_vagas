@@ -11,6 +11,7 @@
 
     <div class="mt-6 text-center">
       <%= link_to 'Editar Perfil', edit_employer_path, class: "text-white bg-green-600 hover:bg-green-700 px-6 py-2 rounded-md font-bold" %>
+      <%= button_to 'Excluir Perfil', registration_path(current_employer), method: :delete, class: "text-white bg-red-600 hover:bg-red-700 px-6 py-2 rounded-md font-bold" %>
     </div>
   </div>
 </div>
