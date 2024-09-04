@@ -2,7 +2,8 @@
 
 class HomeController < ApplicationController
   before_action :authenticate_job_seeker!, except: :welcome
-
+  before_action :verify_profile, only: :apply
+  
   def welcome; end
 
   def index
@@ -23,6 +24,14 @@ class HomeController < ApplicationController
       redirect_to home_path(@job), notice: 'Candidatura enviada com sucesso!'
     else
       redirect_to home_path(@job), notice: 'Não foi possivel enviar sua candidatura'
+    end
+  end
+  
+  private
+  
+  def verify_profile
+    if current_job_seeker.full_name == nil 
+      redirect_to edit_job_seeker_path(current_job_seeker), notice: 'Complete seu perfil antes de continuar'
     end
   end
 end
