@@ -14,7 +14,7 @@ class Employers::RegistrationsController < Devise::RegistrationsController
     super do |employer|
       if employer.persisted?
         sign_in(employer)
-        redirect_to jobs_path
+        redirect_to jobs_path and return
       end
     end
   end

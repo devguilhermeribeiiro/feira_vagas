@@ -96,7 +96,6 @@ ActiveRecord::Schema[7.1].define(version: 2024_09_03_125750) do
   create_table "jobs", force: :cascade do |t|
     t.string "title"
     t.text "description"
-    t.integer "employer_id"
     t.string "location"
     t.string "mode"
     t.datetime "created_at", null: false
@@ -105,6 +104,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_09_03_125750) do
     t.text "skills"
     t.text "benefits"
     t.text "salary"
+    t.integer "employer_id"
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"

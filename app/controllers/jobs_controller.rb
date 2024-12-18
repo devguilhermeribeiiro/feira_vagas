@@ -16,7 +16,7 @@ class JobsController < ApplicationController
   end
 
   def applyers; end
-  
+ 
   def applyer
     @applyer = @applyers.find(params[:job_seeker_id])
   end
@@ -53,16 +53,16 @@ class JobsController < ApplicationController
   def set_job
     @job = Job.find(params[:id])
   end
-  
+ 
   def set_applyers
     @job = Job.find(params[:id])
     @applyers = @job.job_seekers
   end
-  
+ 
   def job_params
     params.require(:job).permit(:title, :description, :location, :mode, :salary, :requirements, :skills, :benefits)
   end
-  
+ 
   def verify_profile
     if current_employer.company_name == nil
       redirect_to edit_employer_path(current_employer)
