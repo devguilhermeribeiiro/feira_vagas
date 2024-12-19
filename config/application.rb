@@ -27,6 +27,6 @@ module FeiraVagas
     # config.eager_load_paths << Rails.root.join("extras")
 
     # I18N configuration
-    config.i18n.default_locale = :pt
+    config.i18n.default_locale = :'pt-BR'
   end
 end
