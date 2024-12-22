@@ -1,15 +1,17 @@
 # frozen_string_literal: true
 
 class JobsController < ApplicationController
-  before_action :set_job, only: %i[ show edit update destroy]
+  before_action :set_job, only: %i[ show edit update destroy ]
   before_action :set_applyers, only: %i[ applyers applyer ]
-  before_action :authenticate_employer!
+  before_action :authenticate_employer!, except: %i[ unconfirmed ]
   before_action :verify_profile, only: %i[ create new ]
 
   def index
     jobs = current_employer.jobs
     @jobs = jobs.sort_by(&:created_at).reverse
   end
+
+  def unconfirmed; end
 
   def new
     @job = Job.new

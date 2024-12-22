@@ -13,8 +13,7 @@ class Employers::RegistrationsController < Devise::RegistrationsController
   def create
     super do |employer|
       if employer.persisted?
-        sign_in(employer)
-        redirect_to jobs_path and return
+        set_flash_message! :notice, :signed_up_but_unconfirmed if !employer.confirmed?
       end
     end
   end
@@ -61,12 +60,12 @@ class Employers::RegistrationsController < Devise::RegistrationsController
   # end
 
   # The path used after sign up.
-  # def after_sign_up_path_for(resource)
-  #   super(resource)
-  # end
+  def after_sign_up_path_for(resource)
+    unconfirmedemployer_path if resource.is_a?(Employer)
+  end
 
   # The path used after sign up for inactive accounts.
-  # def after_inactive_sign_up_path_for(resource)
-  #   super(resource)
-  # end
+  def after_inactive_sign_up_path_for(resource)
+    unconfirmedemployer_path if resource.is_a?(Employer)
+  end
 end

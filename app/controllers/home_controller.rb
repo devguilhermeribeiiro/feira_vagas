@@ -1,10 +1,12 @@
 # frozen_string_literal: true
 
 class HomeController < ApplicationController
-  before_action :authenticate_job_seeker!, except: :welcome
+  before_action :authenticate_job_seeker!, except: %i[welcome unconfirmed]
   before_action :verify_profile, only: :apply
-  
+
   def welcome; end
+
+  def unconfirmed; end
 
   def index
     jobs = Job.all

@@ -13,8 +13,7 @@ class JobSeekers::RegistrationsController < Devise::RegistrationsController
   def create
     super do |job_seeker|
       if job_seeker.persisted?
-        sign_in(job_seeker)
-        redirect_to start_path
+        set_flash_message! :notice, :signed_up_but_unconfirmed if !job_seeker.confirmed?
       end
     end
   end
@@ -48,7 +47,7 @@ class JobSeekers::RegistrationsController < Devise::RegistrationsController
   #   super
   # end
 
-  # protected
+  protected
 
   # If you have extra params to permit, append them to the sanitizer.
   # def configure_sign_up_params
@@ -61,12 +60,12 @@ class JobSeekers::RegistrationsController < Devise::RegistrationsController
   # end
 
   # The path used after sign up.
-  # def after_sign_up_path_for(resource)
-  #   super(resource)
-  # end
+  def after_sign_up_path_for(resource)
+    unconfirmedjobseeker_path if resource.is_a?(JobSeeker)
+  end
 
   # The path used after sign up for inactive accounts.
-  # def after_inactive_sign_up_path_for(resource)
-  #   super(resource)
-  # end
+  def after_inactive_sign_up_path_for(resource)
+    unconfirmedjobseeker_path if resource.is_a?(JobSeeker)
+  end
 end

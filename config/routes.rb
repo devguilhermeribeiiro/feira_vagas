@@ -37,5 +37,7 @@ Rails.application.routes.draw do
   end
 
   get 'start', to: 'home#index', as: :start
+  get 'unconfirmedjobseeker', to: 'home#unconfirmed', as: :unconfirmedjobseeker
+  get 'unconfirmedemployer', to: 'jobs#unconfirmed', as: :unconfirmedemployer
   get 'up' => 'rails/health#show', as: :rails_health_check
 end
