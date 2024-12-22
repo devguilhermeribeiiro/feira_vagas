@@ -54,8 +54,21 @@ pt-BR:
       send_paranoid_instructions: "Se sua conta existir, você receberá um e-mail com instruções para desbloqueá-la em alguns minutos."
       unlocked: "Sua conta foi desbloqueada com sucesso. Efetue login para continuar."
 
+  activerecord:
+    errors:
+      models:
+        job_seeker:
+          attributes:
+            password_confirmation:
+              confirmation: "A confirmação da senha está ausente ou não corresponde à senha."
+        employer:
+          attributes:
+            password_confirmation:
+              confirmation: "A confirmação da senha não corresponde à senha."
+
   errors:
     messages:
+      confirmation: "A confirmação não corresponde."
       already_confirmed: "já foi confirmado"
       confirmation_period_expired: "precisa ser confirmada em até %{period}, por favor, solicite uma nova"
       expired: "expirou, por favor, solicite uma nova"
