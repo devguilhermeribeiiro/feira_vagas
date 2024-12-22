@@ -1,0 +1,12 @@
+<%= params %>
+<div class="container sm:w-11/12 mx-auto min-h-screen flex flex-col items-center justify-center">
+  <section class="w-3/4 max-w-md bg-white p-8 rounded-md shadow-md text-center">
+    <h1 class="text-2xl font-semibold text-green-500 mb-4">Confirme sua conta!</h1>
+      <% if flash[:notice] %>
+        <p class="text-gray-700 text-sm mb-6">
+          <%= flash[:notice] %>
+        </p>
+      <% end %>
+    <%= link_to "Já confirmei minha conta", start_path, class: "block w-full font-semibold bg-green-500 text-white py-2 rounded hover:bg-green-600 cursor-pointer" %>
+  </section>
+</div>
