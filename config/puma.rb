@@ -20,6 +20,13 @@ if ENV['RAILS_ENV'] == 'production'
   workers worker_count if worker_count > 1
 end
 
+if ENV['RAILS_ENV'] == 'production'
+  bind 'ssl://0.0.0.0:443?key=/path/to/key.pem&cert=/path/to/cert.pem'
+else
+  # Apenas no modo de desenvolvimento
+  bind 'tcp://0.0.0.0:3000'
+end
+
 # Specifies the `worker_timeout` threshold that Puma will use to wait before
 # terminating a worker in development environments.
 worker_timeout 3600 if ENV.fetch('RAILS_ENV', 'development') == 'development'
