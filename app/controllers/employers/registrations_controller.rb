@@ -12,9 +12,7 @@ class Employers::RegistrationsController < Devise::RegistrationsController
   # POST /resource
   def create
     super do |employer|
-      if employer.persisted?
-        set_flash_message! :notice, :signed_up_but_unconfirmed if !employer.confirmed?
-      end
+      set_flash_message! :notice, :signed_up_but_unconfirmed if employer.persisted? && !employer.confirmed?
     end
   end
 
@@ -32,7 +30,8 @@ class Employers::RegistrationsController < Devise::RegistrationsController
   def destroy
     super do |employer|
       if employer.destroyed?
-        redirect_to root_path, notice: 'Sua conta foi excluida com sucesso. Você foi redirecionado para a pagina inicial'
+        redirect_to root_path,
+                    notice: 'Sua conta foi excluida com sucesso. Você foi redirecionado para a pagina inicial'
         return
       end
     end
